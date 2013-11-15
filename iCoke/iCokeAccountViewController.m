@@ -6,13 +6,14 @@
 //  Copyright (c) 2013 N. All rights reserved.
 //
 
-#import "iCokeFirstViewController.h"
+#import "iCokeAccountViewController.h"
 
-@interface iCokeFirstViewController ()
+@interface iCokeAccountViewController ()
+
 @end
 
 
-@implementation iCokeFirstViewController
+@implementation iCokeAccountViewController
 
 - (void)viewDidLoad
 {
@@ -30,19 +31,24 @@
 - (IBAction)login:(id)sender {
 	NSLog(@"button pressed...");
 
-	//	NSString *postString = @"submit=1&emailAddress=Nathanielblumer@gmail.com&password=chillout";
+	//	NSString *postString = @"submit=1&emailAddress=Nathanielblumer@*****.com&password=********";
 	//	NSString *urlString = [NSString stringWithFormat:@"https:​/​/​secure.icoke.ca/​account/​login"];
 	//	<form id=​"loginModel" action=​"" method=​"post">
 
-	username = @"nathanielblumer@gmail.com";
-	password = @"chillout";
 
-	
+	NSLog(username.text);
+	NSLog(password.text);
 	
 	NSURL *url = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login/"];
-	NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:@"user", @"nathanielblumer@gmail.com",
-							  @"password", @"chillout", nil];
+	NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:
+							  @"submit", @"1",
+							  @"emailAddress", username.text,
+							  @"password", password.text,
+							  nil];
+	
 	NSData *postData = [self encodeDictionary:postDict];
+	
+	//NSLog(postDict.description);
 	
 	// Create the request
 	NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:url];
@@ -55,8 +61,8 @@
 																  delegate:self];
 	[connection start];
 	NSLog(request.description);
-	[self connection:connection didReceiveResponse:postData];
-	[self connection:connection didReceiveData:postData];
+	//[self connection:connection didReceiveResponse:postData];
+	//[self connection:connection didReceiveData:postData];
 	
 }
 

@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iCokeFirstViewController : UIViewController<NSURLConnectionDelegate>{
+@interface iCokeAccountViewController : UIViewController<NSURLConnectionDelegate>
+{
 
-	NSString *username;
-	NSString *password;
+	__weak IBOutlet UITextField *username;
+	__weak IBOutlet UITextField *password;
+	
     NSMutableData *responseData;
 	NSMutableData *receivedData;
 

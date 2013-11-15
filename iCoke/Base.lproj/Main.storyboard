@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--I Coke First View Controller - First-->
+        <!--I Coke Account View Controller - First-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
-                <viewController title="First" id="CZ4-MO-1fc" customClass="iCokeFirstViewController" sceneMemberID="viewController">
+                <viewController title="First" id="CZ4-MO-1fc" customClass="iCokeAccountViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a8o-iH-hWI"/>
                         <viewControllerLayoutGuide type="bottom" id="bQl-UO-p5d"/>
@@ -83,15 +83,19 @@
                         <color key="backgroundColor" red="0.72947095790000005" green="0.0" blue="0.017196344249999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="points.jpeg" id="u1e-5L-l1D"/>
+                    <connections>
+                        <outlet property="password" destination="2ni-FW-ZEe" id="HE5-md-8oL"/>
+                        <outlet property="username" destination="Ozp-j4-zoe" id="b1z-cq-euR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="727" y="-376"/>
         </scene>
-        <!--I Coke Second View Controller - Second-->
+        <!--I Coke Rewards View Controller - Second-->
         <scene sceneID="ot8-2e-RuS">
             <objects>
-                <viewController title="Second" id="QUy-BD-bpt" customClass="iCokeSecondViewController" sceneMemberID="viewController">
+                <viewController title="Second" id="QUy-BD-bpt" customClass="iCokeRewardsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ILO-4l-U9h"/>
                         <viewControllerLayoutGuide type="bottom" id="e5U-7f-Q0M"/>
@@ -113,6 +117,7 @@
                                 <rect key="frame" x="-20" y="252" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VCV-wg-ue9" id="1lg-Sg-hab">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -124,7 +129,7 @@
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="azs-E6-9Pf" imageView="JO6-Q1-QoS" style="IBUITableViewCellStyleDefault" id="cPJ-kc-Im3">
                                         <rect key="frame" x="0.0" y="22" width="280" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cPJ-kc-Im3">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cPJ-kc-Im3" id="VHC-Go-O0b">
                                             <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>

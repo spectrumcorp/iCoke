@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 N. All rights reserved.
 //
 
-#import "iCokeSecondViewController.h"
+#import "iCokeRewardsViewController.h"
 
-@interface iCokeSecondViewController ()
+@interface iCokeRewardsViewController ()
 
 @end
 
-@implementation iCokeSecondViewController
+@implementation iCokeRewardsViewController
 
 - (void)viewDidLoad
 {

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iCokeSecondViewController : UIViewController
+@interface iCokeRewardsViewController : UIViewController
 
 @end

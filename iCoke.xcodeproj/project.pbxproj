@@ -14,8 +14,8 @@
 		7B028FED1835604100FD30DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FEC1835604100FD30DB /* main.m */; };
 		7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF01835604100FD30DB /* iCokeAppDelegate.m */; };
 		7B028FF41835604100FD30DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FF21835604100FD30DB /* Main.storyboard */; };
-		7B028FF71835604100FD30DB /* iCokeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF61835604100FD30DB /* iCokeFirstViewController.m */; };
-		7B028FFA1835604100FD30DB /* iCokeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF91835604100FD30DB /* iCokeSecondViewController.m */; };
+		7B028FF71835604100FD30DB /* iCokeAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF61835604100FD30DB /* iCokeAccountViewController.m */; };
+		7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */; };
 		7B028FFC1835604100FD30DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FFB1835604100FD30DB /* Images.xcassets */; };
 		7B0290031835604100FD30DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0290021835604100FD30DB /* XCTest.framework */; };
 		7B0290041835604100FD30DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE01835604000FD30DB /* Foundation.framework */; };
@@ -51,10 +51,10 @@
 		7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeAppDelegate.h; sourceTree = "<group>"; };
 		7B028FF01835604100FD30DB /* iCokeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeAppDelegate.m; sourceTree = "<group>"; };
 		7B028FF31835604100FD30DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		7B028FF51835604100FD30DB /* iCokeFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeFirstViewController.h; sourceTree = "<group>"; };
-		7B028FF61835604100FD30DB /* iCokeFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeFirstViewController.m; sourceTree = "<group>"; };
-		7B028FF81835604100FD30DB /* iCokeSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeSecondViewController.h; sourceTree = "<group>"; };
-		7B028FF91835604100FD30DB /* iCokeSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeSecondViewController.m; sourceTree = "<group>"; };
+		7B028FF51835604100FD30DB /* iCokeAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeAccountViewController.h; sourceTree = "<group>"; };
+		7B028FF61835604100FD30DB /* iCokeAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeAccountViewController.m; sourceTree = "<group>"; };
+		7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeRewardsViewController.h; sourceTree = "<group>"; };
+		7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeRewardsViewController.m; sourceTree = "<group>"; };
 		7B028FFB1835604100FD30DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7B0290011835604100FD30DB /* iCokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B0290021835604100FD30DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -135,10 +135,10 @@
 				7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */,
 				7B028FF01835604100FD30DB /* iCokeAppDelegate.m */,
 				7B028FF21835604100FD30DB /* Main.storyboard */,
-				7B028FF51835604100FD30DB /* iCokeFirstViewController.h */,
-				7B028FF61835604100FD30DB /* iCokeFirstViewController.m */,
-				7B028FF81835604100FD30DB /* iCokeSecondViewController.h */,
-				7B028FF91835604100FD30DB /* iCokeSecondViewController.m */,
+				7B028FF51835604100FD30DB /* iCokeAccountViewController.h */,
+				7B028FF61835604100FD30DB /* iCokeAccountViewController.m */,
+				7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */,
+				7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */,
 				7B028FFB1835604100FD30DB /* Images.xcassets */,
 				7B028FE71835604100FD30DB /* Supporting Files */,
 			);
@@ -284,10 +284,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B028FFA1835604100FD30DB /* iCokeSecondViewController.m in Sources */,
+				7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */,
 				7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */,
 				7B028FED1835604100FD30DB /* main.m in Sources */,
-				7B028FF71835604100FD30DB /* iCokeFirstViewController.m in Sources */,
+				7B028FF71835604100FD30DB /* iCokeAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,6 +498,7 @@
 				7B0290141835604100FD30DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7B0290151835604100FD30DB /* Build configuration list for PBXNativeTarget "iCokeTests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +507,7 @@
 				7B0290171835604100FD30DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
