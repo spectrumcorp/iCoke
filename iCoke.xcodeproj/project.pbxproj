@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7B028FE11835604000FD30DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE01835604000FD30DB /* Foundation.framework */; };
+		7B028FE31835604100FD30DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE21835604100FD30DB /* CoreGraphics.framework */; };
+		7B028FE51835604100FD30DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE41835604100FD30DB /* UIKit.framework */; };
+		7B028FEB1835604100FD30DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FE91835604100FD30DB /* InfoPlist.strings */; };
+		7B028FED1835604100FD30DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FEC1835604100FD30DB /* main.m */; };
+		7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF01835604100FD30DB /* iCokeAppDelegate.m */; };
+		7B028FF41835604100FD30DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FF21835604100FD30DB /* Main.storyboard */; };
+		7B028FF71835604100FD30DB /* iCokeFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF61835604100FD30DB /* iCokeFirstViewController.m */; };
+		7B028FFA1835604100FD30DB /* iCokeSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF91835604100FD30DB /* iCokeSecondViewController.m */; };
+		7B028FFC1835604100FD30DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FFB1835604100FD30DB /* Images.xcassets */; };
+		7B0290031835604100FD30DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0290021835604100FD30DB /* XCTest.framework */; };
+		7B0290041835604100FD30DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE01835604000FD30DB /* Foundation.framework */; };
+		7B0290051835604100FD30DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE41835604100FD30DB /* UIKit.framework */; };
+		7B02900D1835604100FD30DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B02900B1835604100FD30DB /* InfoPlist.strings */; };
+		7B02900F1835604100FD30DB /* iCokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02900E1835604100FD30DB /* iCokeTests.m */; };
+		7B02901D1835609C00FD30DB /* go.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B0290181835609C00FD30DB /* go.gif */; };
+		7B02901E1835609C00FD30DB /* points.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B0290191835609C00FD30DB /* points.jpeg */; };
+		7B02901F1835609C00FD30DB /* value_points.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901A1835609C00FD30DB /* value_points.jpeg */; };
+		7B0290201835609C00FD30DB /* admit_one.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901B1835609C00FD30DB /* admit_one.jpeg */; };
+		7B0290211835609C00FD30DB /* iCoke logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901C1835609C00FD30DB /* iCoke logo.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B0290061835604100FD30DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B028FD51835604000FD30DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B028FDC1835604000FD30DB;
+			remoteInfo = iCoke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7B028FDD1835604000FD30DB /* iCoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B028FE01835604000FD30DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B028FE21835604100FD30DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B028FE41835604100FD30DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B028FE81835604100FD30DB /* iCoke-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCoke-Info.plist"; sourceTree = "<group>"; };
+		7B028FEA1835604100FD30DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B028FEC1835604100FD30DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B028FEE1835604100FD30DB /* iCoke-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCoke-Prefix.pch"; sourceTree = "<group>"; };
+		7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeAppDelegate.h; sourceTree = "<group>"; };
+		7B028FF01835604100FD30DB /* iCokeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeAppDelegate.m; sourceTree = "<group>"; };
+		7B028FF31835604100FD30DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B028FF51835604100FD30DB /* iCokeFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeFirstViewController.h; sourceTree = "<group>"; };
+		7B028FF61835604100FD30DB /* iCokeFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeFirstViewController.m; sourceTree = "<group>"; };
+		7B028FF81835604100FD30DB /* iCokeSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeSecondViewController.h; sourceTree = "<group>"; };
+		7B028FF91835604100FD30DB /* iCokeSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeSecondViewController.m; sourceTree = "<group>"; };
+		7B028FFB1835604100FD30DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B0290011835604100FD30DB /* iCokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0290021835604100FD30DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7B02900A1835604100FD30DB /* iCokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCokeTests-Info.plist"; sourceTree = "<group>"; };
+		7B02900C1835604100FD30DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B02900E1835604100FD30DB /* iCokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeTests.m; sourceTree = "<group>"; };
+		7B0290181835609C00FD30DB /* go.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = go.gif; sourceTree = "<group>"; };
+		7B0290191835609C00FD30DB /* points.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = points.jpeg; sourceTree = "<group>"; };
+		7B02901A1835609C00FD30DB /* value_points.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = value_points.jpeg; sourceTree = "<group>"; };
+		7B02901B1835609C00FD30DB /* admit_one.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = admit_one.jpeg; sourceTree = "<group>"; };
+		7B02901C1835609C00FD30DB /* iCoke logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iCoke logo.png"; sourceTree = "<group>"; };
+		7B029022183570D700FD30DB /* iCoke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iCoke.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B028FDA1835604000FD30DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B028FE31835604100FD30DB /* CoreGraphics.framework in Frameworks */,
+				7B028FE51835604100FD30DB /* UIKit.framework in Frameworks */,
+				7B028FE11835604000FD30DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B028FFE1835604100FD30DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0290031835604100FD30DB /* XCTest.framework in Frameworks */,
+				7B0290051835604100FD30DB /* UIKit.framework in Frameworks */,
+				7B0290041835604100FD30DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B028FD41835604000FD30DB = {
+			isa = PBXGroup;
+			children = (
+				7B028FE61835604100FD30DB /* iCoke */,
+				7B0290081835604100FD30DB /* iCokeTests */,
+				7B028FDF1835604000FD30DB /* Frameworks */,
+				7B028FDE1835604000FD30DB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7B028FDE1835604000FD30DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B028FDD1835604000FD30DB /* iCoke.app */,
+				7B0290011835604100FD30DB /* iCokeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B028FDF1835604000FD30DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B028FE01835604000FD30DB /* Foundation.framework */,
+				7B028FE21835604100FD30DB /* CoreGraphics.framework */,
+				7B028FE41835604100FD30DB /* UIKit.framework */,
+				7B0290021835604100FD30DB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B028FE61835604100FD30DB /* iCoke */ = {
+			isa = PBXGroup;
+			children = (
+				7B029022183570D700FD30DB /* iCoke.entitlements */,
+				7B0290181835609C00FD30DB /* go.gif */,
+				7B0290191835609C00FD30DB /* points.jpeg */,
+				7B02901A1835609C00FD30DB /* value_points.jpeg */,
+				7B02901B1835609C00FD30DB /* admit_one.jpeg */,
+				7B02901C1835609C00FD30DB /* iCoke logo.png */,
+				7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */,
+				7B028FF01835604100FD30DB /* iCokeAppDelegate.m */,
+				7B028FF21835604100FD30DB /* Main.storyboard */,
+				7B028FF51835604100FD30DB /* iCokeFirstViewController.h */,
+				7B028FF61835604100FD30DB /* iCokeFirstViewController.m */,
+				7B028FF81835604100FD30DB /* iCokeSecondViewController.h */,
+				7B028FF91835604100FD30DB /* iCokeSecondViewController.m */,
+				7B028FFB1835604100FD30DB /* Images.xcassets */,
+				7B028FE71835604100FD30DB /* Supporting Files */,
+			);
+			path = iCoke;
+			sourceTree = "<group>";
+		};
+		7B028FE71835604100FD30DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B028FE81835604100FD30DB /* iCoke-Info.plist */,
+				7B028FE91835604100FD30DB /* InfoPlist.strings */,
+				7B028FEC1835604100FD30DB /* main.m */,
+				7B028FEE1835604100FD30DB /* iCoke-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B0290081835604100FD30DB /* iCokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B02900E1835604100FD30DB /* iCokeTests.m */,
+				7B0290091835604100FD30DB /* Supporting Files */,
+			);
+			path = iCokeTests;
+			sourceTree = "<group>";
+		};
+		7B0290091835604100FD30DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B02900A1835604100FD30DB /* iCokeTests-Info.plist */,
+				7B02900B1835604100FD30DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B028FDC1835604000FD30DB /* iCoke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0290121835604100FD30DB /* Build configuration list for PBXNativeTarget "iCoke" */;
+			buildPhases = (
+				7B028FD91835604000FD30DB /* Sources */,
+				7B028FDA1835604000FD30DB /* Frameworks */,
+				7B028FDB1835604000FD30DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCoke;
+			productName = iCoke;
+			productReference = 7B028FDD1835604000FD30DB /* iCoke.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B0290001835604100FD30DB /* iCokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0290151835604100FD30DB /* Build configuration list for PBXNativeTarget "iCokeTests" */;
+			buildPhases = (
+				7B028FFD1835604100FD30DB /* Sources */,
+				7B028FFE1835604100FD30DB /* Frameworks */,
+				7B028FFF1835604100FD30DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0290071835604100FD30DB /* PBXTargetDependency */,
+			);
+			name = iCokeTests;
+			productName = iCokeTests;
+			productReference = 7B0290011835604100FD30DB /* iCokeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B028FD51835604000FD30DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iCoke;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = N;
+				TargetAttributes = {
+					7B028FDC1835604000FD30DB = {
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					7B0290001835604100FD30DB = {
+						TestTargetID = 7B028FDC1835604000FD30DB;
+					};
+				};
+			};
+			buildConfigurationList = 7B028FD81835604000FD30DB /* Build configuration list for PBXProject "iCoke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B028FD41835604000FD30DB;
+			productRefGroup = 7B028FDE1835604000FD30DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B028FDC1835604000FD30DB /* iCoke */,
+				7B0290001835604100FD30DB /* iCokeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B028FDB1835604000FD30DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0290201835609C00FD30DB /* admit_one.jpeg in Resources */,
+				7B028FFC1835604100FD30DB /* Images.xcassets in Resources */,
+				7B028FEB1835604100FD30DB /* InfoPlist.strings in Resources */,
+				7B028FF41835604100FD30DB /* Main.storyboard in Resources */,
+				7B02901F1835609C00FD30DB /* value_points.jpeg in Resources */,
+				7B02901D1835609C00FD30DB /* go.gif in Resources */,
+				7B0290211835609C00FD30DB /* iCoke logo.png in Resources */,
+				7B02901E1835609C00FD30DB /* points.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B028FFF1835604100FD30DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B02900D1835604100FD30DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B028FD91835604000FD30DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B028FFA1835604100FD30DB /* iCokeSecondViewController.m in Sources */,
+				7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */,
+				7B028FED1835604100FD30DB /* main.m in Sources */,
+				7B028FF71835604100FD30DB /* iCokeFirstViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B028FFD1835604100FD30DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B02900F1835604100FD30DB /* iCokeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B0290071835604100FD30DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B028FDC1835604000FD30DB /* iCoke */;
+			targetProxy = 7B0290061835604100FD30DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B028FE91835604100FD30DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B028FEA1835604100FD30DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B028FF21835604100FD30DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B028FF31835604100FD30DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B02900B1835604100FD30DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B02900C1835604100FD30DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B0290101835604100FD30DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7B0290111835604100FD30DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B0290131835604100FD30DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iCoke/iCoke.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				INFOPLIST_FILE = "iCoke/iCoke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B0290141835604100FD30DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iCoke/iCoke.entitlements;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				INFOPLIST_FILE = "iCoke/iCoke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7B0290161835604100FD30DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iCoke.app/iCoke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iCokeTests/iCokeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7B0290171835604100FD30DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iCoke.app/iCoke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				INFOPLIST_FILE = "iCokeTests/iCokeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B028FD81835604000FD30DB /* Build configuration list for PBXProject "iCoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0290101835604100FD30DB /* Debug */,
+				7B0290111835604100FD30DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0290121835604100FD30DB /* Build configuration list for PBXNativeTarget "iCoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0290131835604100FD30DB /* Debug */,
+				7B0290141835604100FD30DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7B0290151835604100FD30DB /* Build configuration list for PBXNativeTarget "iCokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0290161835604100FD30DB /* Debug */,
+				7B0290171835604100FD30DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B028FD51835604000FD30DB /* Project object */;
+}
