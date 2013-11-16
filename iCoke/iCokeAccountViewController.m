@@ -19,7 +19,8 @@
 {
 	
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+	loginUrl = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login/"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -28,6 +29,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+
 - (IBAction)login:(id)sender {
 	NSLog(@"button pressed...");
 
@@ -35,11 +37,9 @@
 	//	NSString *urlString = [NSString stringWithFormat:@"https:​/​/​secure.icoke.ca/​account/​login"];
 	//	<form id=​"loginModel" action=​"" method=​"post">
 
-
-	NSLog(username.text);
-	NSLog(password.text);
 	
-	NSURL *url = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login/"];
+	NSLog(@"U: %@	P: %@", [username text], [password text]);
+	
 	NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:
 							  @"submit", @"1",
 							  @"emailAddress", username.text,
@@ -51,19 +51,18 @@
 	//NSLog(postDict.description);
 	
 	// Create the request
-	NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:url];
+	NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:loginUrl];
 	[request setHTTPMethod:@"POST"];
-	[request setValue:[NSString stringWithFormat:@"%d", postData.length] forHTTPHeaderField:@"Content-Length"];
+	[request setValue:[NSString stringWithFormat:@"%d",postData.length] forHTTPHeaderField:@"Content-Length"];
 	[request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
 	[request setHTTPBody:postData];
 	
 	NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request
 																  delegate:self];
 	[connection start];
-	NSLog(request.description);
+	NSLog(@"%@", [request description]);
 	//[self connection:connection didReceiveResponse:postData];
 	//[self connection:connection didReceiveData:postData];
-	
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
@@ -79,7 +78,7 @@
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	NSLog(@"Succeeded! Received %d bytes of data", [receivedData length]);
+	NSLog(@"Succeeded! Received %d bytes of data",[receivedData length]);
 	NSString *responseString = [[NSString alloc] initWithData:receivedData
 													encoding:NSUTF8StringEncoding];
 	

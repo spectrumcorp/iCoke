@@ -10,13 +10,12 @@
 
 @interface iCokeAccountViewController : UIViewController<NSURLConnectionDelegate>
 {
-
 	__weak IBOutlet UITextField *username;
 	__weak IBOutlet UITextField *password;
 	
     NSMutableData *responseData;
 	NSMutableData *receivedData;
-
+	NSURL *loginUrl;
 }
 
 @end
