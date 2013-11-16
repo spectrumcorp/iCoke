@@ -18,7 +18,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,6 +32,38 @@
 	//[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:42653"]];
     [self showSMS:[pin text] ];
 
+}
+- (IBAction)usePhoto:(id)sender {
+	UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+	
+	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+	{
+		[imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+	}
+	
+	// image picker needs a delegate,
+	[imagePickerController setDelegate:self];
+	
+	// Place image picker on the screen
+	[self presentModalViewController:imagePickerController animated:YES];
+}
+
+- (IBAction)takePhoto:(id)sender
+{
+//	UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+//	
+//	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+//	{
+//		[imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+//	}
+//	
+//	// image picker needs a delegate,
+//	[imagePickerController setDelegate:self];
+//	
+//	// Place image picker on the screen
+//	[self presentModalViewController:imagePickerController animated:YES];
+//	
+	NSLog(@"TAKING PHOTO");
 }
 
 

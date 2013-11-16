@@ -12,10 +12,12 @@
 {
 	__weak IBOutlet UITextField *username;
 	__weak IBOutlet UITextField *password;
-	
+
     NSMutableData *responseData;
 	NSMutableData *receivedData;
 	NSURL *loginUrl;
 }
+-(IBAction)textFieldReturn:(id)sender;
+
 
 @end

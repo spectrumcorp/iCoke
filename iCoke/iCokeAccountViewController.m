@@ -32,16 +32,26 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)textFieldReturn:(UITextField *)curField
+{
+	if (curField == password) {
+        [curField resignFirstResponder]; //back to username!
+    } else if (curField == username) {
+        [password becomeFirstResponder]; //stop 
+    }
+    //[sender resignFirstResponder];
+}
+
 
 - (IBAction)login:(id)sender {
-	NSLog(@"button pressed...");
+	NSLog(@"\nLOGIN");
 
 	//	NSString *postString = @"submit=1&emailAddress=Nathanielblumer@*****.com&password=********";
 	//	NSString *urlString = [NSString stringWithFormat:@"https:​/​/​secure.icoke.ca/​account/​login"];
 	//	<form id=​"loginModel" action=​"" method=​"post">
 
 	
-	NSLog(@"U: %@	P: %@", [username text], [password text]);
+	NSLog(@"\nU: %@	P: %@", [username text], [password text]);
 	
 	NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:
 							  @"submit", @"1",
@@ -108,6 +118,11 @@
 	}
 	NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
 	return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
 }
 
 @end
