@@ -121,7 +121,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VCV-wg-ue9" id="1lg-Sg-hab">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -279,7 +279,6 @@
         <!--I CokePIN View Controller - PIN-->
         <scene sceneID="xZT-bZ-Sww">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rqB-wP-4GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="PIN" id="Ovd-b7-KzL" customClass="iCokePINViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZKc-kL-aTf"/>
@@ -335,6 +334,7 @@
                         <outlet property="pin" destination="rD4-ii-Zcp" id="2rJ-bZ-tIE"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqB-wP-4GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="721" y="991"/>
         </scene>
