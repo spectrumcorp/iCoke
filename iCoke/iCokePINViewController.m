@@ -31,10 +31,9 @@
 	return UIStatusBarStyleLightContent;
 }
 
--(void)textFieldReturn:(UITextField *)curField
+-(IBAction)textFieldReturn:(id)sender
 {
-	[curField resignFirstResponder]; //close keyboard for good
-	
+	[sender resignFirstResponder]; //close keyboard for good
 }
 
 - (IBAction)submitPin:(id)sender
@@ -42,7 +41,6 @@
 	NSLog(@"%@", [pin text]);
 	//[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:42653"]];
     [self showSMS:[pin text] ];
-
 }
 
 - (IBAction)usePhoto:(id)sender {
@@ -90,8 +88,8 @@
         return;
     }
 	
-    NSArray *recipent = @[@"42653"];
-    NSString *message = [NSString stringWithFormat:@"%@", pinCode];
+    NSArray * recipent = @[@"42653"];
+    NSString * message = [NSString stringWithFormat:@"%@", pinCode];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;

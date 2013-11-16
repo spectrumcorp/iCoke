@@ -17,7 +17,5 @@
 	NSMutableData *receivedData;
 	NSURL *loginUrl;
 }
--(IBAction)textFieldReturn:(id)sender;
-
 
 @end

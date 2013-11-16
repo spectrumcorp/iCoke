@@ -15,6 +15,4 @@
 	
 }
 
--(IBAction)submitPin:(id)sender;
-
 @end
