@@ -35,6 +35,10 @@
 
 }
 
+
+// http://www.appcoda.com/ios-programming-send-sms-text-message/
+
+
 - (void)showSMS:(NSString*)pinCode {
     
     if(![MFMessageComposeViewController canSendText]) {
