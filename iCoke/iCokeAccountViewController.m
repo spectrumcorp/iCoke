@@ -32,12 +32,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
+}
+
 -(void)textFieldReturn:(UITextField *)curField
 {
 	if (curField == password) {
-        [curField resignFirstResponder]; //back to username!
+        [curField resignFirstResponder]; //close keyboard for good
     } else if (curField == username) {
-        [password becomeFirstResponder]; //stop 
+        [password becomeFirstResponder]; //go to password field
     }
     //[sender resignFirstResponder];
 }
@@ -118,11 +123,6 @@
 	}
 	NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
 	return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-	return UIStatusBarStyleLightContent;
 }
 
 @end

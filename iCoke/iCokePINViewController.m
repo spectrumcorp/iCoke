@@ -26,6 +26,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
+}
+
+-(void)textFieldReturn:(UITextField *)curField
+{
+	[curField resignFirstResponder]; //close keyboard for good
+	
+}
+
 - (IBAction)submitPin:(id)sender
 {
 	NSLog(@"%@", [pin text]);
@@ -33,6 +44,7 @@
     [self showSMS:[pin text] ];
 
 }
+
 - (IBAction)usePhoto:(id)sender {
 	UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
 	
