@@ -15,7 +15,7 @@
 
     NSMutableData *responseData;
 	NSMutableData *receivedData;
-	NSURL *loginUrl;
+	NSURL *loginURL;
 }
 
 @end

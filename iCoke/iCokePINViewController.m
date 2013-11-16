@@ -55,7 +55,7 @@
 	[imagePickerController setDelegate:self];
 	
 	// Place image picker on the screen
-	[self presentModalViewController:imagePickerController animated:YES];
+	[self presentViewController:imagePickerController animated:YES completion:nil];
 }
 
 - (IBAction)takePhoto:(id)sender

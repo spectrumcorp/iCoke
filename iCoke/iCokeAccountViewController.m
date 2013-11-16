@@ -23,7 +23,7 @@
 	
     [super viewDidLoad];
 	
-	loginUrl = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login/"];
+	loginURL = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login/"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -69,7 +69,7 @@
 	//NSLog(postDict.description);
 	
 	// Create the request
-	NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:loginUrl];
+	NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:loginURL];
 	[request setHTTPMethod:@"POST"];
 	[request setValue:[NSString stringWithFormat:@"%d",postData.length] forHTTPHeaderField:@"Content-Length"];
 	[request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
@@ -123,6 +123,16 @@
 	}
 	NSString *encodedDictionary = [parts componentsJoinedByString:@"&"];
 	return [encodedDictionary dataUsingEncoding:NSUTF8StringEncoding];
+}
+
+- (IBAction)signUp:(id)sender {
+	
+	NSString * storyboardName = @"Main";
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+	UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"webViewController"];
+	[self presentViewController:vc animated:YES completion:nil];
+	[self.navigationController pushViewController:vc animated:YES];
+
 }
 
 @end

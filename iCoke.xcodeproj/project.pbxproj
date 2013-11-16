@@ -35,7 +35,7 @@
 		7B7A63311837470000410183 /* reward_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632F1837470000410183 /* reward_48.png */; };
 		7B7A6335183748DC00410183 /* cola_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A6334183748DC00410183 /* cola_32.png */; };
 		7B7A63371837497B00410183 /* octagon-outline-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A63361837497B00410183 /* octagon-outline-32.png */; };
-		7B7A633A18374EC000410183 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A633918374EC000410183 /* opencv2.framework */; };
+		7B7A63401837DF8C00410183 /* iCokeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +85,8 @@
 		7B7A632F1837470000410183 /* reward_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward_48.png; sourceTree = "<group>"; };
 		7B7A6334183748DC00410183 /* cola_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cola_32.png; sourceTree = "<group>"; };
 		7B7A63361837497B00410183 /* octagon-outline-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octagon-outline-32.png"; sourceTree = "<group>"; };
-		7B7A633918374EC000410183 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = ../Downloads/opencv2.framework; sourceTree = "<group>"; };
+		7B7A633E1837DF8C00410183 /* iCokeWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokeWebViewController.h; sourceTree = "<group>"; };
+		7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokeWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +94,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B7A633A18374EC000410183 /* opencv2.framework in Frameworks */,
 				7B7A63251836FBA700410183 /* MessageUI.framework in Frameworks */,
 				7B028FE31835604100FD30DB /* CoreGraphics.framework in Frameworks */,
 				7B028FE51835604100FD30DB /* UIKit.framework in Frameworks */,
@@ -136,7 +136,6 @@
 		7B028FDF1835604000FD30DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				7B7A633918374EC000410183 /* opencv2.framework */,
 				7B7A63241836FBA700410183 /* MessageUI.framework */,
 				7B028FE01835604000FD30DB /* Foundation.framework */,
 				7B028FE21835604100FD30DB /* CoreGraphics.framework */,
@@ -155,6 +154,8 @@
 				7B028FF21835604100FD30DB /* Main.storyboard */,
 				7B028FF51835604100FD30DB /* iCokeAccountViewController.h */,
 				7B028FF61835604100FD30DB /* iCokeAccountViewController.m */,
+				7B7A633E1837DF8C00410183 /* iCokeWebViewController.h */,
+				7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */,
 				7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */,
 				7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */,
 				7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */,
@@ -332,6 +333,7 @@
 				7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */,
 				7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */,
 				7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */,
+				7B7A63401837DF8C00410183 /* iCokeWebViewController.m in Sources */,
 				7B028FED1835604100FD30DB /* main.m in Sources */,
 				7B028FF71835604100FD30DB /* iCokeAccountViewController.m in Sources */,
 			);
