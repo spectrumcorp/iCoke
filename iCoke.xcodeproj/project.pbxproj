@@ -29,6 +29,12 @@
 		7B0290211835609C00FD30DB /* iCoke logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901C1835609C00FD30DB /* iCoke logo.png */; };
 		7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */; };
 		7B7A63251836FBA700410183 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A63241836FBA700410183 /* MessageUI.framework */; };
+		7B7A632B183745F400410183 /* user_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632A183745F400410183 /* user_48.png */; };
+		7B7A632D1837469700410183 /* user_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632C1837469700410183 /* user_32.png */; };
+		7B7A63301837470000410183 /* reward_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632E1837470000410183 /* reward_32.png */; };
+		7B7A63311837470000410183 /* reward_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632F1837470000410183 /* reward_48.png */; };
+		7B7A6335183748DC00410183 /* cola_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A6334183748DC00410183 /* cola_32.png */; };
+		7B7A63371837497B00410183 /* octagon-outline-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A63361837497B00410183 /* octagon-outline-32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,12 @@
 		7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokePINViewController.h; sourceTree = "<group>"; };
 		7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokePINViewController.m; sourceTree = "<group>"; };
 		7B7A63241836FBA700410183 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7B7A632A183745F400410183 /* user_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_48.png; sourceTree = "<group>"; };
+		7B7A632C1837469700410183 /* user_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_32.png; sourceTree = "<group>"; };
+		7B7A632E1837470000410183 /* reward_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward_32.png; sourceTree = "<group>"; };
+		7B7A632F1837470000410183 /* reward_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward_48.png; sourceTree = "<group>"; };
+		7B7A6334183748DC00410183 /* cola_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cola_32.png; sourceTree = "<group>"; };
+		7B7A63361837497B00410183 /* octagon-outline-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octagon-outline-32.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,11 +146,6 @@
 			isa = PBXGroup;
 			children = (
 				7B029022183570D700FD30DB /* iCoke.entitlements */,
-				7B0290181835609C00FD30DB /* go.gif */,
-				7B0290191835609C00FD30DB /* points.jpeg */,
-				7B02901A1835609C00FD30DB /* value_points.jpeg */,
-				7B02901B1835609C00FD30DB /* admit_one.jpeg */,
-				7B02901C1835609C00FD30DB /* iCoke logo.png */,
 				7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */,
 				7B028FF01835604100FD30DB /* iCokeAppDelegate.m */,
 				7B028FF21835604100FD30DB /* Main.storyboard */,
@@ -157,6 +164,12 @@
 		7B028FE71835604100FD30DB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7B7A633818374D2400410183 /* icons */,
+				7B0290181835609C00FD30DB /* go.gif */,
+				7B0290191835609C00FD30DB /* points.jpeg */,
+				7B02901A1835609C00FD30DB /* value_points.jpeg */,
+				7B02901B1835609C00FD30DB /* admit_one.jpeg */,
+				7B02901C1835609C00FD30DB /* iCoke logo.png */,
 				7B028FE81835604100FD30DB /* iCoke-Info.plist */,
 				7B028FE91835604100FD30DB /* InfoPlist.strings */,
 				7B028FEC1835604100FD30DB /* main.m */,
@@ -181,6 +194,19 @@
 				7B02900B1835604100FD30DB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B7A633818374D2400410183 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				7B7A63361837497B00410183 /* octagon-outline-32.png */,
+				7B7A6334183748DC00410183 /* cola_32.png */,
+				7B7A632E1837470000410183 /* reward_32.png */,
+				7B7A632F1837470000410183 /* reward_48.png */,
+				7B7A632A183745F400410183 /* user_48.png */,
+				7B7A632C1837469700410183 /* user_32.png */,
+			);
+			name = icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,11 +295,17 @@
 			files = (
 				7B0290201835609C00FD30DB /* admit_one.jpeg in Resources */,
 				7B028FFC1835604100FD30DB /* Images.xcassets in Resources */,
+				7B7A632B183745F400410183 /* user_48.png in Resources */,
+				7B7A632D1837469700410183 /* user_32.png in Resources */,
+				7B7A63311837470000410183 /* reward_48.png in Resources */,
+				7B7A63371837497B00410183 /* octagon-outline-32.png in Resources */,
 				7B028FEB1835604100FD30DB /* InfoPlist.strings in Resources */,
 				7B028FF41835604100FD30DB /* Main.storyboard in Resources */,
 				7B02901F1835609C00FD30DB /* value_points.jpeg in Resources */,
 				7B02901D1835609C00FD30DB /* go.gif in Resources */,
+				7B7A6335183748DC00410183 /* cola_32.png in Resources */,
 				7B0290211835609C00FD30DB /* iCoke logo.png in Resources */,
+				7B7A63301837470000410183 /* reward_32.png in Resources */,
 				7B02901E1835609C00FD30DB /* points.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

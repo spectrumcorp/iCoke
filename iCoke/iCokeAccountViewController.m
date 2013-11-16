@@ -6,6 +6,9 @@
 //  Copyright (c) 2013 N. All rights reserved.
 //
 
+//	Mini cola bottle : http://findicons.com/files/icons/1509/world_of_copland_3/32/cola.png
+//	Account, Rewards icon Visual Pharm - http://icons8.com/
+
 #import "iCokeAccountViewController.h"
 
 @interface iCokeAccountViewController ()
