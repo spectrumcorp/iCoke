@@ -41,14 +41,11 @@
 {
 	if (curField == password) {
         [curField resignFirstResponder]; //close keyboard for good
-    } else if (curField == username) {
-        [password becomeFirstResponder]; //go to password field
-    } else if (curField == phoneNumber) {
+    } else if (curField == username || curField == phoneNumber) {
         [password becomeFirstResponder]; //go to password field
     }
     //[sender resignFirstResponder];
 }
-
 
 - (IBAction)login:(id)sender {
 	//	NSLog(@"key: %@", [parameters allKeys]);
@@ -63,62 +60,30 @@
 									@"mobile3":@"6283",
 									@"password":[password text],
 									@"_eventId_submit":@"Login"
-
-									   
-//									@"submit": @"1",
-//									@"emailAddress":[username text],
-//									@"password":[password text],
-//									@"rememberMe": @"true",
-//									@"_rememberMe": @"on"
 								}];
 
-	// POST TO THE SERVER! WHY DOESN'T THIS WORK?
-//	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1?" parameters:parameters
-//		  success:^(AFHTTPRequestOperation *operation, id responseObject) {NSLog(@"\n***JSON***\n: %@", responseObject);}
-//		  failure:^(AFHTTPRequestOperation *operation, NSError *error) { NSLog(@"\n***Error***\n: %@", error);
-//	}
-//	];
- 
-	manager.requestSerializer = [AFJSONRequestSerializer serializer];
-	manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+//	manager.requestSerializer = [AFJSONRequestSerializer serializer];
+//	manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	
 	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
 		  success:^(AFHTTPRequestOperation *operation, id responseObject) {
 			  NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-			  NSLog(@"***/nresponseString***/n %@", responseString);
+			  NSLog(@"***\nresponseString***\n %@", responseString);
 		  }
 		  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-			  NSLog(@"***/nError***/n %@", error);
+			  NSLog(@"***\nError***\n %@", error);
 		  }
 	 ];
 }
 
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	[receivedData setLength:0];
-	NSLog(@"data sent!!!");
-
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
-	[receivedData appendData:data];
-	NSLog(@"data!!!!");
-
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-	NSLog(@"Succeeded! Received %d bytes of data",[receivedData length]);
-	NSString *responseString = [[NSString alloc] initWithData:receivedData
-													encoding:NSUTF8StringEncoding];
+- (IBAction)user_id_Switch:(id)sender {
 	
-	NSLog(@"connection finished!!!");
-
-	// Assume lowercase
-	if ([responseString isEqualToString:@"true"]) {
-		NSLog(@"SUCCESS!!!");
-		return;
-	}else{	// Deal with an error
-
-		NSLog(@"ERROR!!!");
-
+	if (username.hidden){
+		[username setHidden: NO];
+		[phoneNumber setHidden:YES];
+	}else{
+		[username setHidden: YES];
+		[phoneNumber setHidden: NO];
 	}
 }
 
@@ -143,5 +108,6 @@
 	[self.navigationController pushViewController:vc animated:YES];
 
 }
+
 
 @end

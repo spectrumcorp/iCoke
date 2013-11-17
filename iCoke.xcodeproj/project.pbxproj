@@ -1,1488 +1,626 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0899AC3B08B44508BACE2D3E</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1D2199F4A92A44A49C7DE951</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>58AA569934E14B70B07D3178</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>5A94B29D0CEB4CB39952B22A</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1D2199F4A92A44A49C7DE951</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FD41835604000FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B028FE61835604100FD30DB</string>
-				<string>7B0290081835604100FD30DB</string>
-				<string>7B028FDF1835604000FD30DB</string>
-				<string>7B028FDE1835604000FD30DB</string>
-				<string>0899AC3B08B44508BACE2D3E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FD51835604000FD30DB</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>CLASSPREFIX</key>
-				<string>iCoke</string>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>N</string>
-				<key>TargetAttributes</key>
-				<dict>
-					<key>7B028FDC1835604000FD30DB</key>
-					<dict>
-						<key>SystemCapabilities</key>
-						<dict>
-							<key>com.apple.Keychain</key>
-							<dict>
-								<key>enabled</key>
-								<string>1</string>
-							</dict>
-						</dict>
-					</dict>
-					<key>7B0290001835604100FD30DB</key>
-					<dict>
-						<key>TestTargetID</key>
-						<string>7B028FDC1835604000FD30DB</string>
-					</dict>
-				</dict>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>7B028FD81835604000FD30DB</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-				<string>Base</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7B028FD41835604000FD30DB</string>
-			<key>productRefGroup</key>
-			<string>7B028FDE1835604000FD30DB</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>7B028FDC1835604000FD30DB</string>
-				<string>7B0290001835604100FD30DB</string>
-			</array>
-		</dict>
-		<key>7B028FD81835604000FD30DB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7B0290101835604100FD30DB</string>
-				<string>7B0290111835604100FD30DB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7B028FD91835604000FD30DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7B028FFA1835604100FD30DB</string>
-				<string>7B65063E1836DB1E00C28F1B</string>
-				<string>7B028FF11835604100FD30DB</string>
-				<string>7B7A63401837DF8C00410183</string>
-				<string>7B028FED1835604100FD30DB</string>
-				<string>7B028FF71835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B028FDA1835604000FD30DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7B7A63251836FBA700410183</string>
-				<string>7B028FE31835604100FD30DB</string>
-				<string>7B028FE51835604100FD30DB</string>
-				<string>7B028FE11835604000FD30DB</string>
-				<string>5A94B29D0CEB4CB39952B22A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B028FDB1835604000FD30DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7B0290201835609C00FD30DB</string>
-				<string>7B028FFC1835604100FD30DB</string>
-				<string>7B7A632B183745F400410183</string>
-				<string>7B7A632D1837469700410183</string>
-				<string>7B7A63311837470000410183</string>
-				<string>7B7A63371837497B00410183</string>
-				<string>7B028FEB1835604100FD30DB</string>
-				<string>7B028FF41835604100FD30DB</string>
-				<string>7B02901F1835609C00FD30DB</string>
-				<string>7B02901D1835609C00FD30DB</string>
-				<string>7B7A6335183748DC00410183</string>
-				<string>7B0290211835609C00FD30DB</string>
-				<string>7B7A63301837470000410183</string>
-				<string>7B02901E1835609C00FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B028FDC1835604000FD30DB</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7B0290121835604100FD30DB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>58AA569934E14B70B07D3178</string>
-				<string>7B028FD91835604000FD30DB</string>
-				<string>7B028FDA1835604000FD30DB</string>
-				<string>7B028FDB1835604000FD30DB</string>
-				<string>FD490E922B1A4C90A479EB01</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>iCoke</string>
-			<key>productName</key>
-			<string>iCoke</string>
-			<key>productReference</key>
-			<string>7B028FDD1835604000FD30DB</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>7B028FDD1835604000FD30DB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>iCoke.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7B028FDE1835604000FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B028FDD1835604000FD30DB</string>
-				<string>7B0290011835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FDF1835604000FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B7A63241836FBA700410183</string>
-				<string>7B028FE01835604000FD30DB</string>
-				<string>7B028FE21835604100FD30DB</string>
-				<string>7B028FE41835604100FD30DB</string>
-				<string>7B0290021835604100FD30DB</string>
-				<string>1D2199F4A92A44A49C7DE951</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FE01835604000FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7B028FE11835604000FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FE01835604000FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FE21835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7B028FE31835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FE21835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FE41835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7B028FE51835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FE41835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FE61835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B029022183570D700FD30DB</string>
-				<string>7B028FEF1835604100FD30DB</string>
-				<string>7B028FF01835604100FD30DB</string>
-				<string>7B028FF21835604100FD30DB</string>
-				<string>7B028FF51835604100FD30DB</string>
-				<string>7B028FF61835604100FD30DB</string>
-				<string>7B7A633E1837DF8C00410183</string>
-				<string>7B7A633F1837DF8C00410183</string>
-				<string>7B65063C1836DB1E00C28F1B</string>
-				<string>7B65063D1836DB1E00C28F1B</string>
-				<string>7B028FF81835604100FD30DB</string>
-				<string>7B028FF91835604100FD30DB</string>
-				<string>7B028FFB1835604100FD30DB</string>
-				<string>7B028FE71835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>iCoke</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FE71835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B7A633818374D2400410183</string>
-				<string>7B0290181835609C00FD30DB</string>
-				<string>7B0290191835609C00FD30DB</string>
-				<string>7B02901A1835609C00FD30DB</string>
-				<string>7B02901B1835609C00FD30DB</string>
-				<string>7B02901C1835609C00FD30DB</string>
-				<string>7B028FE81835604100FD30DB</string>
-				<string>7B028FE91835604100FD30DB</string>
-				<string>7B028FEC1835604100FD30DB</string>
-				<string>7B028FEE1835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FE81835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>iCoke-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FE91835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B028FEA1835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FEA1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FEB1835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FE91835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FEC1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FED1835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FEC1835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FEE1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>iCoke-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FEF1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>iCokeAppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF01835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>iCokeAppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF11835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FF01835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FF21835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B028FF31835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF31835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>file.storyboard</string>
-			<key>name</key>
-			<string>Base</string>
-			<key>path</key>
-			<string>Base.lproj/Main.storyboard</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF41835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FF21835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FF51835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>iCokeAccountViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF61835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>iCokeAccountViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF71835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FF61835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FF81835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>iCokeRewardsViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FF91835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>iCokeRewardsViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FFA1835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FF91835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FFB1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>folder.assetcatalog</string>
-			<key>path</key>
-			<string>Images.xcassets</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B028FFC1835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FFB1835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B028FFD1835604100FD30DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7B02900F1835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B028FFE1835604100FD30DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7B0290031835604100FD30DB</string>
-				<string>7B0290051835604100FD30DB</string>
-				<string>7B0290041835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B028FFF1835604100FD30DB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7B02900D1835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7B0290001835604100FD30DB</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7B0290151835604100FD30DB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7B028FFD1835604100FD30DB</string>
-				<string>7B028FFE1835604100FD30DB</string>
-				<string>7B028FFF1835604100FD30DB</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>7B0290071835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>iCokeTests</string>
-			<key>productName</key>
-			<string>iCokeTests</string>
-			<key>productReference</key>
-			<string>7B0290011835604100FD30DB</string>
-			<key>productType</key>
-			<string>com.apple.product-type.bundle.unit-test</string>
-		</dict>
-		<key>7B0290011835604100FD30DB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.cfbundle</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>iCokeTests.xctest</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7B0290021835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>XCTest.framework</string>
-			<key>path</key>
-			<string>Library/Frameworks/XCTest.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>7B0290031835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B0290021835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B0290041835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FE01835604000FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B0290051835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B028FE41835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B0290061835604100FD30DB</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>7B028FD51835604000FD30DB</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>7B028FDC1835604000FD30DB</string>
-			<key>remoteInfo</key>
-			<string>iCoke</string>
-		</dict>
-		<key>7B0290071835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>7B028FDC1835604000FD30DB</string>
-			<key>targetProxy</key>
-			<string>7B0290061835604100FD30DB</string>
-		</dict>
-		<key>7B0290081835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B02900E1835604100FD30DB</string>
-				<string>7B0290091835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>iCokeTests</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B0290091835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B02900A1835604100FD30DB</string>
-				<string>7B02900B1835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02900A1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>iCokeTests-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02900B1835604100FD30DB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B02900C1835604100FD30DB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02900C1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02900D1835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B02900B1835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B02900E1835604100FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>iCokeTests.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02900F1835604100FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B02900E1835604100FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B0290101835604100FD30DB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>ONLY_ACTIVE_ARCH</key>
-				<string>YES</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7B0290111835604100FD30DB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_CXX_LIBRARY</key>
-				<string>libc++</string>
-				<key>CLANG_ENABLE_MODULES</key>
-				<string>YES</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN_BOOL_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN_EMPTY_BODY</key>
-				<string>YES</string>
-				<key>CLANG_WARN_ENUM_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_INT_CONVERSION</key>
-				<string>YES</string>
-				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
-				<string>YES_ERROR</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>ENABLE_NS_ASSERTIONS</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
-				<string>YES</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES_ERROR</string>
-				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_FUNCTION</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>7.0</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7B0290121835604100FD30DB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7B0290131835604100FD30DB</string>
-				<string>7B0290141835604100FD30DB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7B0290131835604100FD30DB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0899AC3B08B44508BACE2D3E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>iCoke/iCoke.entitlements</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Users/nathanielblumer/Downloads</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>iCoke/iCoke-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>iCoke/iCoke-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7B0290141835604100FD30DB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>0899AC3B08B44508BACE2D3E</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
-				<string>AppIcon</string>
-				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
-				<string>LaunchImage</string>
-				<key>CODE_SIGN_ENTITLEMENTS</key>
-				<string>iCoke/iCoke.entitlements</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(inherited)</string>
-					<string>/Users/nathanielblumer/Downloads</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>iCoke/iCoke-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>iCoke/iCoke-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7B0290151835604100FD30DB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7B0290161835604100FD30DB</string>
-				<string>7B0290171835604100FD30DB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7B0290161835604100FD30DB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/iCoke.app/iCoke</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>iCoke/iCoke-Prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>INFOPLIST_FILE</key>
-				<string>iCokeTests/iCokeTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7B0290171835604100FD30DB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>BUNDLE_LOADER</key>
-				<string>$(BUILT_PRODUCTS_DIR)/iCoke.app/iCoke</string>
-				<key>FRAMEWORK_SEARCH_PATHS</key>
-				<array>
-					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
-					<string>$(inherited)</string>
-					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
-				</array>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>iCoke/iCoke-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>iCokeTests/iCokeTests-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>TEST_HOST</key>
-				<string>$(BUNDLE_LOADER)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>xctest</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7B0290181835609C00FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.gif</string>
-			<key>path</key>
-			<string>go.gif</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B0290191835609C00FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>points.jpeg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02901A1835609C00FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>value_points.jpeg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02901B1835609C00FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.jpeg</string>
-			<key>path</key>
-			<string>admit_one.jpeg</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02901C1835609C00FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>iCoke logo.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B02901D1835609C00FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B0290181835609C00FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B02901E1835609C00FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B0290191835609C00FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B02901F1835609C00FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B02901A1835609C00FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B0290201835609C00FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B02901B1835609C00FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B0290211835609C00FD30DB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B02901C1835609C00FD30DB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B029022183570D700FD30DB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xml</string>
-			<key>path</key>
-			<string>iCoke.entitlements</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B65063C1836DB1E00C28F1B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>iCokePINViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B65063D1836DB1E00C28F1B</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>iCokePINViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B65063E1836DB1E00C28F1B</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B65063D1836DB1E00C28F1B</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A63241836FBA700410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>MessageUI.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/MessageUI.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7B7A63251836FBA700410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A63241836FBA700410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A632A183745F400410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>user_48.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A632B183745F400410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A632A183745F400410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A632C1837469700410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>user_32.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A632D1837469700410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A632C1837469700410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A632E1837470000410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>reward_32.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A632F1837470000410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>reward_48.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A63301837470000410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A632E1837470000410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A63311837470000410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A632F1837470000410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A6334183748DC00410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>cola_32.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A6335183748DC00410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A6334183748DC00410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A63361837497B00410183</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>image.png</string>
-			<key>path</key>
-			<string>octagon-outline-32.png</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A63371837497B00410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A63361837497B00410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7B7A633818374D2400410183</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7B7A63361837497B00410183</string>
-				<string>7B7A6334183748DC00410183</string>
-				<string>7B7A632E1837470000410183</string>
-				<string>7B7A632F1837470000410183</string>
-				<string>7B7A632A183745F400410183</string>
-				<string>7B7A632C1837469700410183</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>icons</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A633E1837DF8C00410183</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>iCokeWebViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A633F1837DF8C00410183</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>iCokeWebViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7B7A63401837DF8C00410183</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7B7A633F1837DF8C00410183</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FD490E922B1A4C90A479EB01</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>7B028FD51835604000FD30DB</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5A94B29D0CEB4CB39952B22A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D2199F4A92A44A49C7DE951 /* libPods.a */; };
+		7B028FE11835604000FD30DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE01835604000FD30DB /* Foundation.framework */; };
+		7B028FE31835604100FD30DB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE21835604100FD30DB /* CoreGraphics.framework */; };
+		7B028FE51835604100FD30DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE41835604100FD30DB /* UIKit.framework */; };
+		7B028FEB1835604100FD30DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FE91835604100FD30DB /* InfoPlist.strings */; };
+		7B028FED1835604100FD30DB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FEC1835604100FD30DB /* main.m */; };
+		7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF01835604100FD30DB /* iCokeAppDelegate.m */; };
+		7B028FF41835604100FD30DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FF21835604100FD30DB /* Main.storyboard */; };
+		7B028FF71835604100FD30DB /* iCokeAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF61835604100FD30DB /* iCokeAccountViewController.m */; };
+		7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */; };
+		7B028FFC1835604100FD30DB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7B028FFB1835604100FD30DB /* Images.xcassets */; };
+		7B0290031835604100FD30DB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B0290021835604100FD30DB /* XCTest.framework */; };
+		7B0290041835604100FD30DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE01835604000FD30DB /* Foundation.framework */; };
+		7B0290051835604100FD30DB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B028FE41835604100FD30DB /* UIKit.framework */; };
+		7B02900D1835604100FD30DB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B02900B1835604100FD30DB /* InfoPlist.strings */; };
+		7B02900F1835604100FD30DB /* iCokeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B02900E1835604100FD30DB /* iCokeTests.m */; };
+		7B02901D1835609C00FD30DB /* go.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7B0290181835609C00FD30DB /* go.gif */; };
+		7B02901E1835609C00FD30DB /* points.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B0290191835609C00FD30DB /* points.jpeg */; };
+		7B02901F1835609C00FD30DB /* value_points.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901A1835609C00FD30DB /* value_points.jpeg */; };
+		7B0290201835609C00FD30DB /* admit_one.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901B1835609C00FD30DB /* admit_one.jpeg */; };
+		7B0290211835609C00FD30DB /* iCoke logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B02901C1835609C00FD30DB /* iCoke logo.png */; };
+		7B51CDB91838874A001F831C /* MyLaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B51CDB81838874A001F831C /* MyLaunchImage.png */; };
+		7B51CDBD18388BBC001F831C /* iCokeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B51CDBC18388BBC001F831C /* iCokeIcon.png */; };
+		7B51CDBF18388C11001F831C /* iCokeIcon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B51CDBE18388C11001F831C /* iCokeIcon_60.png */; };
+		7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */; };
+		7B7A63251836FBA700410183 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A63241836FBA700410183 /* MessageUI.framework */; };
+		7B7A632B183745F400410183 /* user_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632A183745F400410183 /* user_48.png */; };
+		7B7A632D1837469700410183 /* user_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632C1837469700410183 /* user_32.png */; };
+		7B7A63301837470000410183 /* reward_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632E1837470000410183 /* reward_32.png */; };
+		7B7A63311837470000410183 /* reward_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632F1837470000410183 /* reward_48.png */; };
+		7B7A6335183748DC00410183 /* cola_32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A6334183748DC00410183 /* cola_32.png */; };
+		7B7A63371837497B00410183 /* octagon-outline-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A63361837497B00410183 /* octagon-outline-32.png */; };
+		7B7A63401837DF8C00410183 /* iCokeWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7B0290061835604100FD30DB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7B028FD51835604000FD30DB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B028FDC1835604000FD30DB;
+			remoteInfo = iCoke;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0899AC3B08B44508BACE2D3E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		1D2199F4A92A44A49C7DE951 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B028FDD1835604000FD30DB /* iCoke.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCoke.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B028FE01835604000FD30DB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7B028FE21835604100FD30DB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7B028FE41835604100FD30DB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7B028FE81835604100FD30DB /* iCoke-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCoke-Info.plist"; sourceTree = "<group>"; };
+		7B028FEA1835604100FD30DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B028FEC1835604100FD30DB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7B028FEE1835604100FD30DB /* iCoke-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCoke-Prefix.pch"; sourceTree = "<group>"; };
+		7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeAppDelegate.h; sourceTree = "<group>"; };
+		7B028FF01835604100FD30DB /* iCokeAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeAppDelegate.m; sourceTree = "<group>"; };
+		7B028FF31835604100FD30DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7B028FF51835604100FD30DB /* iCokeAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeAccountViewController.h; sourceTree = "<group>"; };
+		7B028FF61835604100FD30DB /* iCokeAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeAccountViewController.m; sourceTree = "<group>"; };
+		7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iCokeRewardsViewController.h; sourceTree = "<group>"; };
+		7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeRewardsViewController.m; sourceTree = "<group>"; };
+		7B028FFB1835604100FD30DB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7B0290011835604100FD30DB /* iCokeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iCokeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B0290021835604100FD30DB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7B02900A1835604100FD30DB /* iCokeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iCokeTests-Info.plist"; sourceTree = "<group>"; };
+		7B02900C1835604100FD30DB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7B02900E1835604100FD30DB /* iCokeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCokeTests.m; sourceTree = "<group>"; };
+		7B0290181835609C00FD30DB /* go.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = go.gif; sourceTree = "<group>"; };
+		7B0290191835609C00FD30DB /* points.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = points.jpeg; sourceTree = "<group>"; };
+		7B02901A1835609C00FD30DB /* value_points.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = value_points.jpeg; sourceTree = "<group>"; };
+		7B02901B1835609C00FD30DB /* admit_one.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = admit_one.jpeg; sourceTree = "<group>"; };
+		7B02901C1835609C00FD30DB /* iCoke logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iCoke logo.png"; sourceTree = "<group>"; };
+		7B029022183570D700FD30DB /* iCoke.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = iCoke.entitlements; sourceTree = "<group>"; };
+		7B51CDB81838874A001F831C /* MyLaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MyLaunchImage.png; sourceTree = "<group>"; };
+		7B51CDBC18388BBC001F831C /* iCokeIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCokeIcon.png; sourceTree = "<group>"; };
+		7B51CDBE18388C11001F831C /* iCokeIcon_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCokeIcon_60.png; sourceTree = "<group>"; };
+		7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokePINViewController.h; sourceTree = "<group>"; };
+		7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokePINViewController.m; sourceTree = "<group>"; };
+		7B7A63241836FBA700410183 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		7B7A632A183745F400410183 /* user_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_48.png; sourceTree = "<group>"; };
+		7B7A632C1837469700410183 /* user_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_32.png; sourceTree = "<group>"; };
+		7B7A632E1837470000410183 /* reward_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward_32.png; sourceTree = "<group>"; };
+		7B7A632F1837470000410183 /* reward_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reward_48.png; sourceTree = "<group>"; };
+		7B7A6334183748DC00410183 /* cola_32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cola_32.png; sourceTree = "<group>"; };
+		7B7A63361837497B00410183 /* octagon-outline-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "octagon-outline-32.png"; sourceTree = "<group>"; };
+		7B7A633E1837DF8C00410183 /* iCokeWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokeWebViewController.h; sourceTree = "<group>"; };
+		7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokeWebViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B028FDA1835604000FD30DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B7A63251836FBA700410183 /* MessageUI.framework in Frameworks */,
+				7B028FE31835604100FD30DB /* CoreGraphics.framework in Frameworks */,
+				7B028FE51835604100FD30DB /* UIKit.framework in Frameworks */,
+				7B028FE11835604000FD30DB /* Foundation.framework in Frameworks */,
+				5A94B29D0CEB4CB39952B22A /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B028FFE1835604100FD30DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0290031835604100FD30DB /* XCTest.framework in Frameworks */,
+				7B0290051835604100FD30DB /* UIKit.framework in Frameworks */,
+				7B0290041835604100FD30DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7B028FD41835604000FD30DB = {
+			isa = PBXGroup;
+			children = (
+				7B028FE61835604100FD30DB /* iCoke */,
+				7B0290081835604100FD30DB /* iCokeTests */,
+				7B028FDF1835604000FD30DB /* Frameworks */,
+				7B028FDE1835604000FD30DB /* Products */,
+				0899AC3B08B44508BACE2D3E /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		7B028FDE1835604000FD30DB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7B028FDD1835604000FD30DB /* iCoke.app */,
+				7B0290011835604100FD30DB /* iCokeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7B028FDF1835604000FD30DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B7A63241836FBA700410183 /* MessageUI.framework */,
+				7B028FE01835604000FD30DB /* Foundation.framework */,
+				7B028FE21835604100FD30DB /* CoreGraphics.framework */,
+				7B028FE41835604100FD30DB /* UIKit.framework */,
+				7B0290021835604100FD30DB /* XCTest.framework */,
+				1D2199F4A92A44A49C7DE951 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7B028FE61835604100FD30DB /* iCoke */ = {
+			isa = PBXGroup;
+			children = (
+				7B029022183570D700FD30DB /* iCoke.entitlements */,
+				7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */,
+				7B028FF01835604100FD30DB /* iCokeAppDelegate.m */,
+				7B028FF21835604100FD30DB /* Main.storyboard */,
+				7B028FF51835604100FD30DB /* iCokeAccountViewController.h */,
+				7B028FF61835604100FD30DB /* iCokeAccountViewController.m */,
+				7B7A633E1837DF8C00410183 /* iCokeWebViewController.h */,
+				7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */,
+				7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */,
+				7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */,
+				7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */,
+				7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */,
+				7B028FFB1835604100FD30DB /* Images.xcassets */,
+				7B028FE71835604100FD30DB /* Supporting Files */,
+			);
+			path = iCoke;
+			sourceTree = "<group>";
+		};
+		7B028FE71835604100FD30DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B7A633818374D2400410183 /* icons */,
+				7B0290181835609C00FD30DB /* go.gif */,
+				7B0290191835609C00FD30DB /* points.jpeg */,
+				7B02901A1835609C00FD30DB /* value_points.jpeg */,
+				7B02901B1835609C00FD30DB /* admit_one.jpeg */,
+				7B02901C1835609C00FD30DB /* iCoke logo.png */,
+				7B028FE81835604100FD30DB /* iCoke-Info.plist */,
+				7B028FE91835604100FD30DB /* InfoPlist.strings */,
+				7B028FEC1835604100FD30DB /* main.m */,
+				7B028FEE1835604100FD30DB /* iCoke-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B0290081835604100FD30DB /* iCokeTests */ = {
+			isa = PBXGroup;
+			children = (
+				7B02900E1835604100FD30DB /* iCokeTests.m */,
+				7B0290091835604100FD30DB /* Supporting Files */,
+			);
+			path = iCokeTests;
+			sourceTree = "<group>";
+		};
+		7B0290091835604100FD30DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7B02900A1835604100FD30DB /* iCokeTests-Info.plist */,
+				7B02900B1835604100FD30DB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B7A633818374D2400410183 /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				7B51CDBC18388BBC001F831C /* iCokeIcon.png */,
+				7B51CDBE18388C11001F831C /* iCokeIcon_60.png */,
+				7B51CDB81838874A001F831C /* MyLaunchImage.png */,
+				7B7A63361837497B00410183 /* octagon-outline-32.png */,
+				7B7A6334183748DC00410183 /* cola_32.png */,
+				7B7A632E1837470000410183 /* reward_32.png */,
+				7B7A632F1837470000410183 /* reward_48.png */,
+				7B7A632A183745F400410183 /* user_48.png */,
+				7B7A632C1837469700410183 /* user_32.png */,
+			);
+			name = icons;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7B028FDC1835604000FD30DB /* iCoke */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0290121835604100FD30DB /* Build configuration list for PBXNativeTarget "iCoke" */;
+			buildPhases = (
+				58AA569934E14B70B07D3178 /* Check Pods Manifest.lock */,
+				7B028FD91835604000FD30DB /* Sources */,
+				7B028FDA1835604000FD30DB /* Frameworks */,
+				7B028FDB1835604000FD30DB /* Resources */,
+				FD490E922B1A4C90A479EB01 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iCoke;
+			productName = iCoke;
+			productReference = 7B028FDD1835604000FD30DB /* iCoke.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7B0290001835604100FD30DB /* iCokeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B0290151835604100FD30DB /* Build configuration list for PBXNativeTarget "iCokeTests" */;
+			buildPhases = (
+				7B028FFD1835604100FD30DB /* Sources */,
+				7B028FFE1835604100FD30DB /* Frameworks */,
+				7B028FFF1835604100FD30DB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7B0290071835604100FD30DB /* PBXTargetDependency */,
+			);
+			name = iCokeTests;
+			productName = iCokeTests;
+			productReference = 7B0290011835604100FD30DB /* iCokeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7B028FD51835604000FD30DB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = iCoke;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = N;
+				TargetAttributes = {
+					7B028FDC1835604000FD30DB = {
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
+					};
+					7B0290001835604100FD30DB = {
+						TestTargetID = 7B028FDC1835604000FD30DB;
+					};
+				};
+			};
+			buildConfigurationList = 7B028FD81835604000FD30DB /* Build configuration list for PBXProject "iCoke" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7B028FD41835604000FD30DB;
+			productRefGroup = 7B028FDE1835604000FD30DB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7B028FDC1835604000FD30DB /* iCoke */,
+				7B0290001835604100FD30DB /* iCokeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7B028FDB1835604000FD30DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B0290201835609C00FD30DB /* admit_one.jpeg in Resources */,
+				7B51CDBF18388C11001F831C /* iCokeIcon_60.png in Resources */,
+				7B028FFC1835604100FD30DB /* Images.xcassets in Resources */,
+				7B7A632B183745F400410183 /* user_48.png in Resources */,
+				7B7A632D1837469700410183 /* user_32.png in Resources */,
+				7B51CDBD18388BBC001F831C /* iCokeIcon.png in Resources */,
+				7B7A63311837470000410183 /* reward_48.png in Resources */,
+				7B7A63371837497B00410183 /* octagon-outline-32.png in Resources */,
+				7B028FEB1835604100FD30DB /* InfoPlist.strings in Resources */,
+				7B028FF41835604100FD30DB /* Main.storyboard in Resources */,
+				7B51CDB91838874A001F831C /* MyLaunchImage.png in Resources */,
+				7B02901F1835609C00FD30DB /* value_points.jpeg in Resources */,
+				7B02901D1835609C00FD30DB /* go.gif in Resources */,
+				7B7A6335183748DC00410183 /* cola_32.png in Resources */,
+				7B0290211835609C00FD30DB /* iCoke logo.png in Resources */,
+				7B7A63301837470000410183 /* reward_32.png in Resources */,
+				7B02901E1835609C00FD30DB /* points.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B028FFF1835604100FD30DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B02900D1835604100FD30DB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58AA569934E14B70B07D3178 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD490E922B1A4C90A479EB01 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7B028FD91835604000FD30DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */,
+				7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */,
+				7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */,
+				7B7A63401837DF8C00410183 /* iCokeWebViewController.m in Sources */,
+				7B028FED1835604100FD30DB /* main.m in Sources */,
+				7B028FF71835604100FD30DB /* iCokeAccountViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7B028FFD1835604100FD30DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B02900F1835604100FD30DB /* iCokeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7B0290071835604100FD30DB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7B028FDC1835604000FD30DB /* iCoke */;
+			targetProxy = 7B0290061835604100FD30DB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7B028FE91835604100FD30DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B028FEA1835604100FD30DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7B028FF21835604100FD30DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B028FF31835604100FD30DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7B02900B1835604100FD30DB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7B02900C1835604100FD30DB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7B0290101835604100FD30DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7B0290111835604100FD30DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7B0290131835604100FD30DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0899AC3B08B44508BACE2D3E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iCoke/iCoke.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nathanielblumer/Downloads,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				INFOPLIST_FILE = "iCoke/iCoke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7B0290141835604100FD30DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0899AC3B08B44508BACE2D3E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = iCoke/iCoke.entitlements;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/nathanielblumer/Downloads,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				INFOPLIST_FILE = "iCoke/iCoke-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7B0290161835604100FD30DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iCoke.app/iCoke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iCokeTests/iCokeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7B0290171835604100FD30DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/iCoke.app/iCoke";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "iCoke/iCoke-Prefix.pch";
+				INFOPLIST_FILE = "iCokeTests/iCokeTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7B028FD81835604000FD30DB /* Build configuration list for PBXProject "iCoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0290101835604100FD30DB /* Debug */,
+				7B0290111835604100FD30DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0290121835604100FD30DB /* Build configuration list for PBXNativeTarget "iCoke" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0290131835604100FD30DB /* Debug */,
+				7B0290141835604100FD30DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7B0290151835604100FD30DB /* Build configuration list for PBXNativeTarget "iCokeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7B0290161835604100FD30DB /* Debug */,
+				7B0290171835604100FD30DB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7B028FD51835604000FD30DB /* Project object */;
+}
