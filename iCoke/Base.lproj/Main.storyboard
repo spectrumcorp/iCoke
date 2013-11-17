@@ -30,7 +30,7 @@
                                     <action selector="textFieldReturn:" destination="CZ4-MO-1fc" eventType="editingDidEndOnExit" id="kkl-j6-JTN"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="•••••••" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2ni-FW-ZEe" userLabel="textfield_password">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="•••••••" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2ni-FW-ZEe" userLabel="textfield_password">
                                 <rect key="frame" x="20" y="235" width="150" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -68,7 +68,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pwi-yM-uos" userLabel="button_login">
-                                <rect key="frame" x="201" y="235" width="99" height="30"/>
+                                <rect key="frame" x="201" y="236" width="99" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.96847951929999998" blue="0.94835355379999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration" label="">
@@ -94,12 +94,23 @@
                                     <action selector="signUp:" destination="CZ4-MO-1fc" eventType="touchUpInside" id="FnO-HI-8c0"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="5145556283" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-li-OBu" userLabel="textfield_number">
+                                <rect key="frame" x="20" y="176" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" returnKeyType="done"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.72947095790000005" green="0.0" blue="0.017196344249999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="user_32.png" id="u1e-5L-l1D"/>
                     <connections>
                         <outlet property="password" destination="2ni-FW-ZEe" id="HE5-md-8oL"/>
+                        <outlet property="phoneNumber" destination="Zp8-li-OBu" id="Op6-1k-z9J"/>
                         <outlet property="username" destination="Ozp-j4-zoe" id="b1z-cq-euR"/>
                     </connections>
                 </viewController>

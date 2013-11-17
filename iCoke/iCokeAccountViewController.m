@@ -43,6 +43,8 @@
         [curField resignFirstResponder]; //close keyboard for good
     } else if (curField == username) {
         [password becomeFirstResponder]; //go to password field
+    } else if (curField == phoneNumber) {
+        [password becomeFirstResponder]; //go to password field
     }
     //[sender resignFirstResponder];
 }
@@ -57,8 +59,8 @@
 	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
 	NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
 									@"mobile1":@"514",
-									@"mobile1":@"975",
-									@"mobile1":@"6283",
+									@"mobile2":@"975",
+									@"mobile3":@"6283",
 									@"password":[password text],
 									@"_eventId_submit":@"Login"
 
@@ -70,14 +72,24 @@
 //									@"_rememberMe": @"on"
 								}];
 
-//	submit=1&emailAddress=nathanielblumer@gmail.com&password=chillout&rememberMe=true&_rememberMe=on 
 	// POST TO THE SERVER! WHY DOESN'T THIS WORK?
-	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1?" parameters:parameters
-		  success:^(AFHTTPRequestOperation *operation, id responseObject) {NSLog(@"\n***JSON***\n: %@", responseObject);}
-		  failure:^(AFHTTPRequestOperation *operation, NSError *error) { NSLog(@"\n***Error***\n: %@", error);
-	}];
+//	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1?" parameters:parameters
+//		  success:^(AFHTTPRequestOperation *operation, id responseObject) {NSLog(@"\n***JSON***\n: %@", responseObject);}
+//		  failure:^(AFHTTPRequestOperation *operation, NSError *error) { NSLog(@"\n***Error***\n: %@", error);
+//	}
+//	];
  
-	
+	manager.requestSerializer = [AFJSONRequestSerializer serializer];
+	manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
+		  success:^(AFHTTPRequestOperation *operation, id responseObject) {
+			  NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+			  NSLog(@"***/nresponseString***/n %@", responseString);
+		  }
+		  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+			  NSLog(@"***/nError***/n %@", error);
+		  }
+	 ];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
