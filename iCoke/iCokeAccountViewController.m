@@ -10,7 +10,7 @@
 //	Account, Rewards icon Visual Pharm - http://icons8.com/
 
 #import "iCokeAccountViewController.h"
-
+#import "AFHTTPRequestOperationManager.h"
 @interface iCokeAccountViewController ()
 
 @end
@@ -23,7 +23,7 @@
 	
     [super viewDidLoad];
 	
-	loginURL = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login/"];
+	loginURL = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -49,38 +49,35 @@
 
 
 - (IBAction)login:(id)sender {
-	NSLog(@"\nLOGIN");
+	//	NSLog(@"key: %@", [parameters allKeys]);
+	//	NSLog(@"value: %@", [parameters allValues]);
+	//	NSLog(@"\nU: %@	P: %@", [username text], [password text]);
+	
+	
+	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+	NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
+									@"mobile1":@"514",
+									@"mobile1":@"975",
+									@"mobile1":@"6283",
+									@"password":[password text],
+									@"_eventId_submit":@"Login"
 
-	//	NSString *postString = @"submit=1&emailAddress=Nathanielblumer@*****.com&password=********";
-	//	NSString *urlString = [NSString stringWithFormat:@"https:​/​/​secure.icoke.ca/​account/​login"];
-	//	<form id=​"loginModel" action=​"" method=​"post">
+									   
+//									@"submit": @"1",
+//									@"emailAddress":[username text],
+//									@"password":[password text],
+//									@"rememberMe": @"true",
+//									@"_rememberMe": @"on"
+								}];
 
+//	submit=1&emailAddress=nathanielblumer@gmail.com&password=chillout&rememberMe=true&_rememberMe=on 
+	// POST TO THE SERVER! WHY DOESN'T THIS WORK?
+	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1?" parameters:parameters
+		  success:^(AFHTTPRequestOperation *operation, id responseObject) {NSLog(@"\n***JSON***\n: %@", responseObject);}
+		  failure:^(AFHTTPRequestOperation *operation, NSError *error) { NSLog(@"\n***Error***\n: %@", error);
+	}];
+ 
 	
-	NSLog(@"\nU: %@	P: %@", [username text], [password text]);
-	
-	NSDictionary *postDict = [NSDictionary dictionaryWithObjectsAndKeys:
-							  @"submit", @"1",
-							  @"emailAddress", username.text,
-							  @"password", password.text,
-							  nil];
-	
-	NSData *postData = [self encodeDictionary:postDict];
-	
-	//NSLog(postDict.description);
-	
-	// Create the request
-	NSMutableURLRequest *request =[NSMutableURLRequest requestWithURL:loginURL];
-	[request setHTTPMethod:@"POST"];
-	[request setValue:[NSString stringWithFormat:@"%d",postData.length] forHTTPHeaderField:@"Content-Length"];
-	[request setValue:@"application/x-www-form-urlencoded charset=utf-8" forHTTPHeaderField:@"Content-Type"];
-	[request setHTTPBody:postData];
-	
-	NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request
-																  delegate:self];
-	[connection start];
-	NSLog(@"%@", [request description]);
-	//[self connection:connection didReceiveResponse:postData];
-	//[self connection:connection didReceiveData:postData];
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

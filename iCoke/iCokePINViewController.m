@@ -8,7 +8,7 @@
 
 #import "iCokePINViewController.h"
 
-@interface iCokePINViewController ()
+@interface iCokePINViewController () <MFMessageComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
 
