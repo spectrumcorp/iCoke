@@ -13,11 +13,12 @@
 }
 @property int sid;
 @property (nonatomic, copy) NSString *title;
-@property int points;
+@property (nonatomic, copy) NSString *points;
 @property (nonatomic, copy) NSString *details;
+@property (nonatomic, copy) NSString *imageName;
 
 - (id)init;
-- (id)initWithID:(int)ssid withTitle:(NSString*)title withPoints:(int)points withDescription:(NSString*)details;
+- (id)initWithID:(int)ssid withTitle:(NSString*)title withPoints:(NSString*)points withDescription:(NSString*)details withImage:(NSString*)imageName;
 
 
 @end

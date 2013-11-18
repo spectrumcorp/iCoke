@@ -13,21 +13,21 @@
 @synthesize title;
 @synthesize points;
 @synthesize details;
+@synthesize imageName;
 
 int sid;
 NSString *title;
-int points;
+NSString *points;
 NSString *details;
-
-
+NSString *imageName;
 
 - (id)init
 {
-    return [self initWithID:1234 withTitle:@"Title" withPoints:500 withDescription:@"Cool reward!"];
+    return [self initWithID:1234 withTitle:@"Title" withPoints:@"500" withDescription:@"Cool reward!" withImage:@"admit_one.jpeg"];
 }
 
 
-- (id) initWithID:(int)ssid withTitle:(NSString*)tit withPoints:(int)pts withDescription:(NSString*)desc
+- (id) initWithID:(int)ssid withTitle:(NSString*)tit withPoints:(NSString*)pts withDescription:(NSString*)desc withImage:(NSString*)img
 {
     self = [super init];
     if(self) {
@@ -35,14 +35,15 @@ NSString *details;
         title = tit;
         points = pts;
 		details = desc;
-		NSLog(@"_init: %@", self);
+		imageName = img;
+		//NSLog(@"_init: %@", self);
     }
     return(self);
 }
 
 - (NSString*)description
 {
-    return [NSString stringWithFormat:@"\n%@, %i, %@", title, points, details];
+    return [NSString stringWithFormat:@"\n%@, %@, %@, %@", title, points, details, imageName];
 }
 
 @end

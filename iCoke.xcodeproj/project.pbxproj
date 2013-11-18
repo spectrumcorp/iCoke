@@ -181,9 +181,9 @@
 				7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */,
 				7B51CDC01839B938001F831C /* RewardViewController.h */,
 				7B51CDC11839B938001F831C /* RewardViewController.m */,
-				7B028FE71835604100FD30DB /* Supporting Files */,
 				7B51CDC31839C3B7001F831C /* iCokeReward.h */,
 				7B51CDC41839C3B7001F831C /* iCokeReward.m */,
+				7B028FE71835604100FD30DB /* Supporting Files */,
 			);
 			path = iCoke;
 			sourceTree = "<group>";

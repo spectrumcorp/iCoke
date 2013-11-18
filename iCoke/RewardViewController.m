@@ -25,7 +25,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	//[self.rewardDescription setText:[reward description]];
+	[self.rewardDescription setText:[_reward details]];
+	[self.rewardPoints setText:[_reward points]];
+	[self.rewardTitle setText:[_reward title]];
+	
+	UIImage *myImage = [UIImage imageNamed:[_reward imageName]];
+	[self.rewardImage setImage:myImage];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+	return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning
