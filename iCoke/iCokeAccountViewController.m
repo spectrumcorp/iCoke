@@ -11,10 +11,9 @@
 
 #import "iCokeAccountViewController.h"
 #import "AFHTTPRequestOperationManager.h"
+
 @interface iCokeAccountViewController ()
-
 @end
-
 
 @implementation iCokeAccountViewController
 

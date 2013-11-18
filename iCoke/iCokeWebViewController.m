@@ -38,7 +38,6 @@
 }
 
 - (IBAction)close:(id)sender {
-	NSLog(@"Close window");
 	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
