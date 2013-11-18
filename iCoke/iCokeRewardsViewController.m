@@ -9,7 +9,8 @@
 #import "iCokeRewardsViewController.h"
 
 @interface iCokeRewardsViewController ()
-
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *rewardsArray;
 @end
 
 @implementation iCokeRewardsViewController
@@ -20,14 +21,19 @@
     [super viewDidLoad];
 	
 	self.tableView.dataSource = self;
+	self.tableView.delegate = self;
+	self.rewardsArray = [self getRewards];
+}
+
+- (NSArray *)getRewards
+{
+	NSArray * rewards = [NSArray alloc];
 	
-	self.rewardsArray = [[NSArray alloc] initWithObjects:
-						@"Always put your fears behind you and your dreams in front of you.",
-						@"A relationship with no trust is like a cell phone with no service, all you can do is play games.",
-						@"People should stop talking about their problem and start thinking about the solution.",
-						@"Dear Chuck Norris, Screw you. I can grill burgers under water. Sincerely, Spongebob Squarepants.",
-						@"My arms will always be open for you, they will never close, not unless you're in them.",
-						nil];
+	iCokeReward * reward = [[iCokeReward alloc] init];
+	
+	
+	return [rewards initWithObjects:reward, nil];
+	
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -38,33 +44,31 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-//3
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	return [self.rewardsArray count];
 }
 
-//4
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-	//5
+	
 	static NSString *cellIdentifier = @"SettingsCell";
 	
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
 	
-	//5.1 you do not need this if you have set SettingsCell as identifier in the storyboard (else you can remove the comments on this code)
-	//if (cell == nil)
-	//    {
-	//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
-	//   }
+	iCokeReward *reward = [self.rewardsArray objectAtIndex:indexPath.row];
 	
-	//6
-	NSString *tweet = [self.rewardsArray objectAtIndex:indexPath.row];
-	//7
-	[cell.textLabel setText:tweet];
-	[cell.detailTextLabel setText:@"via Codigator"];
+	[cell.textLabel setText:[reward title]];
+	[cell.detailTextLabel setText: [reward details]];
 	return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	RewardViewController *rvc =
+		[self.storyboard instantiateViewControllerWithIdentifier:@"RewardViewController"];
+	rvc.reward = [self.rewardsArray objectAtIndex:indexPath.row];
+	[self.navigationController pushViewController:rvc animated:YES];
 }
 
 @end

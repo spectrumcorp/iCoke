@@ -9,7 +9,6 @@
 #import "RewardViewController.h"
 
 @interface RewardViewController ()
-
 @end
 
 @implementation RewardViewController
@@ -26,7 +25,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	[self.rewardDescription setText:self.description];
+	//[self.rewardDescription setText:[reward description]];
 }
 
 - (void)didReceiveMemoryWarning

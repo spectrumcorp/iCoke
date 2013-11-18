@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "iCokeReward.h"
 
 @interface RewardViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *rewardDescription;
-@property (nonatomic,strong) NSString *reward;
+@property (nonatomic,strong) iCokeReward *reward;
 @end

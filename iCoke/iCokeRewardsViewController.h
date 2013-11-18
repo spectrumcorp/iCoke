@@ -7,12 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RewardViewController.h"
 
-@interface iCokeRewardsViewController : UIViewController <UITableViewDataSource>
-
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
-
-@property (strong, nonatomic) NSArray *rewardsArray;
+@interface iCokeRewardsViewController : UIViewController
+										<UITableViewDataSource, UITableViewDelegate>
 
 @end
-

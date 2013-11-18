@@ -32,6 +32,7 @@
 		7B51CDBD18388BBC001F831C /* iCokeIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B51CDBC18388BBC001F831C /* iCokeIcon.png */; };
 		7B51CDBF18388C11001F831C /* iCokeIcon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B51CDBE18388C11001F831C /* iCokeIcon_60.png */; };
 		7B51CDC21839B938001F831C /* RewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51CDC11839B938001F831C /* RewardViewController.m */; };
+		7B51CDC51839C3B7001F831C /* iCokeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51CDC41839C3B7001F831C /* iCokeReward.m */; };
 		7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */; };
 		7B7A63251836FBA700410183 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A63241836FBA700410183 /* MessageUI.framework */; };
 		7B7A632B183745F400410183 /* user_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632A183745F400410183 /* user_48.png */; };
@@ -88,6 +89,8 @@
 		7B51CDBE18388C11001F831C /* iCokeIcon_60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iCokeIcon_60.png; sourceTree = "<group>"; };
 		7B51CDC01839B938001F831C /* RewardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RewardViewController.h; sourceTree = "<group>"; };
 		7B51CDC11839B938001F831C /* RewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardViewController.m; sourceTree = "<group>"; };
+		7B51CDC31839C3B7001F831C /* iCokeReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokeReward.h; sourceTree = "<group>"; };
+		7B51CDC41839C3B7001F831C /* iCokeReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokeReward.m; sourceTree = "<group>"; };
 		7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokePINViewController.h; sourceTree = "<group>"; };
 		7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokePINViewController.m; sourceTree = "<group>"; };
 		7B7A63241836FBA700410183 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -179,6 +182,8 @@
 				7B51CDC01839B938001F831C /* RewardViewController.h */,
 				7B51CDC11839B938001F831C /* RewardViewController.m */,
 				7B028FE71835604100FD30DB /* Supporting Files */,
+				7B51CDC31839C3B7001F831C /* iCokeReward.h */,
+				7B51CDC41839C3B7001F831C /* iCokeReward.m */,
 			);
 			path = iCoke;
 			sourceTree = "<group>";
@@ -388,6 +393,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B51CDC51839C3B7001F831C /* iCokeReward.m in Sources */,
 				7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */,
 				7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */,
 				7B51CDC21839B938001F831C /* RewardViewController.m in Sources */,
