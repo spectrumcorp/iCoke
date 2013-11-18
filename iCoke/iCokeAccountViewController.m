@@ -49,32 +49,46 @@
 }
 
 - (IBAction)login:(id)sender {
-	//	NSLog(@"key: %@", [parameters allKeys]);
-	//	NSLog(@"value: %@", [parameters allValues]);
 	//	NSLog(@"\nU: %@	P: %@", [username text], [password text]);
+	//kinda crazy that they've chosen to break up the phone number into 3 parts...
+	NSString *areaCode;
+	NSString *firstThree;
+	NSString *lastFour;
 	
+	if ([[phoneNumber text] length] == 10){
+		areaCode = [[phoneNumber text] substringWithRange:NSMakeRange(0, 3)];
+		firstThree = [[phoneNumber text] substringWithRange:NSMakeRange(3, 3)];
+		lastFour = [[phoneNumber text] substringWithRange:NSMakeRange(5, 4)];
 	
-	AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-	NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
-									@"mobile1":@"514",
-									@"mobile2":@"975",
-									@"mobile3":@"6283",
-									@"password":[password text],
-									@"_eventId_submit":@"Login"
-								}];
+		AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+		NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
+																   @"mobile1":areaCode,
+																   @"mobile2":firstThree,
+																   @"mobile3":lastFour,
+																   @"password":[password text],
+																   @"_eventId_submit":@"Login"
+																   }];
+		
+		//	manager.requestSerializer = [AFJSONRequestSerializer serializer];
+		//	manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+		
+		[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
+			  success:^(AFHTTPRequestOperation *operation, id responseObject) {
+				  NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+				  NSLog(@"***\nresponseString***\n %@", responseString);
+			  }
+			  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+				  NSLog(@"***\nError***\n %@", error);
+			  }
+		 ];
+	}else{
+		
+	}
 
-//	manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//	manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+	NSLog(@"\npart1: %@	part2: %@ part3: %@", areaCode, firstThree, lastFour);
 	
-	[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
-		  success:^(AFHTTPRequestOperation *operation, id responseObject) {
-			  NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-			  NSLog(@"***\nresponseString***\n %@", responseString);
-		  }
-		  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-			  NSLog(@"***\nError***\n %@", error);
-		  }
-	 ];
+				
+	
 }
 
 - (IBAction)user_id_Switch:(id)sender {

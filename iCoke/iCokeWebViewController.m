@@ -18,10 +18,10 @@
 {
     [super viewDidLoad];
 	
-	signupURL = [NSURL URLWithString:@"https://secure.icoke.ca/account/registration?execution=e1s1"];
+	signupURL = [NSURL fileURLWithPath:@"https://m.icoke.ca/wap/register?execution=e1s1"];
 
 	webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 414)];
-	NSURLRequest *request=[NSURLRequest requestWithURL:signupURL cachePolicy:NSURLCacheStorageNotAllowed timeoutInterval:10];
+	NSURLRequest *request=[NSURLRequest requestWithURL:signupURL cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:10];
 	[webView setScalesPageToFit:YES];
 	[webView loadRequest:request];
 }

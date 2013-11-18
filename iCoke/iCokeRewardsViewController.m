@@ -23,30 +23,24 @@
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
 	self.rewardsArray = [self getRewards];
-	//[self viewWillDisappear:NO];
 	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; //text count
 	[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:186.0f/255.0f green:0.0f/255.0f blue:4.0f/255.0f alpha:1.0f]]; //background bar
-	
-//    UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-//    [rightButton addTarget:self action:@selector(test) forControlEvents:UIControlEventTouchUpInside];
+	[self viewWillDisappear:NO];
 
 }
-
-- (void)test{
-	NSLog(@"TEST************");
-}
-
 - (UIStatusBarStyle)preferredStatusBarStyle
 {
 	return UIStatusBarStyleLightContent;
 }
 
+// Called when the view is about to made visible. Default does nothing
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:YES animated:animated];
     [super viewWillAppear:animated];
 }
 
+// Called when the view is dismissed, covered or otherwise hidden. Default does nothing
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:animated];
@@ -83,7 +77,7 @@
 	iCokeReward *reward = [self.rewardsArray objectAtIndex:indexPath.row];
 	
 	[cell.textLabel setText:[reward title]];
-	NSLog(@"%@", [reward details]);
+	//NSLog(@"%@", [reward details]);
 	[cell.detailTextLabel setText: [reward details]];
 	return cell;
 }
@@ -94,5 +88,6 @@
 	rvc.reward = [self.rewardsArray objectAtIndex:indexPath.row];
 	[self.navigationController pushViewController:rvc animated:YES];
 }
+
 
 @end

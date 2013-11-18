@@ -23,7 +23,7 @@ NSString *imageName;
 
 - (id)init
 {
-    return [self initWithID:1234 withTitle:@"Title" withPoints:@"500" withDescription:@"Cool reward!" withImage:@"admit_one.jpeg"];
+    return [self initWithID:1234 withTitle:@"Title" withPoints:@"500" withDescription:@"Details!" withImage:@"admit_one.jpeg"];
 }
 
 
