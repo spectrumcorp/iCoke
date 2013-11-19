@@ -22,6 +22,9 @@
 
 	webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 414)];
 	NSURLRequest *request=[NSURLRequest requestWithURL:signupURL cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:10];
+	[[UINavigationBar appearance] setTintColor:[UIColor redColor]]; //text count
+	[[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]]; //background bar
+
 	[webView setScalesPageToFit:YES];
 	[webView loadRequest:request];
 }

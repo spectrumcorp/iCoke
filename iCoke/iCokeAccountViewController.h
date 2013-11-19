@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFHTTPRequestOperationManager.h"
 
 @interface iCokeAccountViewController : UIViewController<NSURLConnectionDelegate>
 {
@@ -17,6 +18,7 @@
     NSMutableData *responseData;
 	NSMutableData *receivedData;
 	NSURL *loginURL;
+	AFHTTPRequestOperationManager * manager;
 }
 
 @end

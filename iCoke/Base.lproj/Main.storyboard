@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="a8o-iH-hWI"/>
                         <viewControllerLayoutGuide type="bottom" id="bQl-UO-p5d"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa">
+                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa" userLabel="View_account_main">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -44,7 +44,7 @@
                                     <action selector="textFieldReturn:" destination="CZ4-MO-1fc" eventType="editingDidEndOnExit" id="lZg-xD-p4d"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="514 555 6283" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-li-OBu" userLabel="textfield_number">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="5149756283" borderStyle="bezel" placeholder="514 555 6283" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-li-OBu" userLabel="textfield_number">
                                 <rect key="frame" x="20" y="152" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

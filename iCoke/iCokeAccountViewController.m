@@ -10,7 +10,6 @@
 //	Account, Rewards icon Visual Pharm - http://icons8.com/
 
 #import "iCokeAccountViewController.h"
-#import "AFHTTPRequestOperationManager.h"
 
 @interface iCokeAccountViewController ()
 @end
@@ -22,7 +21,9 @@
 	
     [super viewDidLoad];
 	
-	loginURL = [NSURL URLWithString:@"https:​/​/​secure.icoke.ca/​account/​login"];
+	manager = [AFHTTPRequestOperationManager manager];
+	loginURL = [NSURL URLWithString:@"https://m.icoke.ca/wap/main"];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -45,12 +46,9 @@
     } else if (curField == username || curField == phoneNumber) {
         [password becomeFirstResponder]; //go to password field
     }
-    //[sender resignFirstResponder];
 }
 
 - (IBAction)login:(id)sender {
-	//	NSLog(@"\nU: %@	P: %@", [username text], [password text]);
-	//kinda crazy that they've chosen to break up the phone number into 3 parts...
 	NSString *areaCode;
 	NSString *firstThree;
 	NSString *lastFour;
@@ -58,9 +56,15 @@
 	if ([[phoneNumber text] length] == 10){
 		areaCode = [[phoneNumber text] substringWithRange:NSMakeRange(0, 3)];
 		firstThree = [[phoneNumber text] substringWithRange:NSMakeRange(3, 3)];
-		lastFour = [[phoneNumber text] substringWithRange:NSMakeRange(5, 4)];
-	
-		AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+		lastFour = [[phoneNumber text] substringWithRange:NSMakeRange(6, 4)];
+
+
+		manager.securityPolicy.allowInvalidCertificates = YES;
+		manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+		manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+		[manager.requestSerializer
+		 setAuthorizationHeaderFieldWithUsername:@"basic_auth_username"
+		 password:@"basic_auth_password"];
 		NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
 																   @"mobile1":areaCode,
 																   @"mobile2":firstThree,
@@ -68,27 +72,62 @@
 																   @"password":[password text],
 																   @"_eventId_submit":@"Login"
 																   }];
-		
-		//	manager.requestSerializer = [AFJSONRequestSerializer serializer];
-		//	manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-		
+			
 		[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
 			  success:^(AFHTTPRequestOperation *operation, id responseObject) {
 				  NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-				  NSLog(@"***\nresponseString***\n %@", responseString);
+				  NSLog(@"\n***RESPONSE***\n %@", responseString);
 			  }
 			  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-				  NSLog(@"***\nError***\n %@", error);
+				  NSLog(@"\n***Error***\n %@", error);
 			  }
 		 ];
+
+		
+		
+		
 	}else{
 		
 	}
-
-	NSLog(@"\npart1: %@	part2: %@ part3: %@", areaCode, firstThree, lastFour);
-	
 				
 	
+}
+
+static NSString* form_urlencode_HTTP5_String(NSString* s) {
+    CFStringRef charactersToLeaveUnescaped = CFSTR(" ");
+    CFStringRef legalURLCharactersToBeEscaped = CFSTR("!$&'()+,/:;=?@~");
+	
+    NSString *result = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
+																				 kCFAllocatorDefault,
+																				 (__bridge CFStringRef)s,
+																				 charactersToLeaveUnescaped,
+																				 legalURLCharactersToBeEscaped,
+																				 kCFStringEncodingUTF8));
+    return [result stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+}
+
+static NSString* form_urlencode_HTTP5_Parameters(NSDictionary* parameters)
+{
+    NSMutableString* result = [[NSMutableString alloc] init];
+    BOOL isFirst = YES;
+    for (NSString* name in parameters) {
+        if (!isFirst) {
+            [result appendString:@"&"];
+        }
+        isFirst = NO;
+        assert([name isKindOfClass:[NSString class]]);
+        NSString* value = parameters[name];
+        assert([value isKindOfClass:[NSString class]]);
+		
+        NSString* encodedName = form_urlencode_HTTP5_String(name);
+        NSString* encodedValue = form_urlencode_HTTP5_String(value);
+		
+        [result appendString:encodedName];
+        [result appendString:@"="];
+        [result appendString:encodedValue];
+    }
+	
+    return [result copy];
 }
 
 - (IBAction)user_id_Switch:(id)sender {
