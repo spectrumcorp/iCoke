@@ -90,44 +90,12 @@
 		
 	}
 				
+	NSString * storyboardName = @"Main";
+	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
+	UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"MyAccount"];
+	[self presentViewController:vc animated:YES completion:nil];
+	[self.navigationController pushViewController:vc animated:YES];
 	
-}
-
-static NSString* form_urlencode_HTTP5_String(NSString* s) {
-    CFStringRef charactersToLeaveUnescaped = CFSTR(" ");
-    CFStringRef legalURLCharactersToBeEscaped = CFSTR("!$&'()+,/:;=?@~");
-	
-    NSString *result = CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(
-																				 kCFAllocatorDefault,
-																				 (__bridge CFStringRef)s,
-																				 charactersToLeaveUnescaped,
-																				 legalURLCharactersToBeEscaped,
-																				 kCFStringEncodingUTF8));
-    return [result stringByReplacingOccurrencesOfString:@" " withString:@"+"];
-}
-
-static NSString* form_urlencode_HTTP5_Parameters(NSDictionary* parameters)
-{
-    NSMutableString* result = [[NSMutableString alloc] init];
-    BOOL isFirst = YES;
-    for (NSString* name in parameters) {
-        if (!isFirst) {
-            [result appendString:@"&"];
-        }
-        isFirst = NO;
-        assert([name isKindOfClass:[NSString class]]);
-        NSString* value = parameters[name];
-        assert([value isKindOfClass:[NSString class]]);
-		
-        NSString* encodedName = form_urlencode_HTTP5_String(name);
-        NSString* encodedValue = form_urlencode_HTTP5_String(value);
-		
-        [result appendString:encodedName];
-        [result appendString:@"="];
-        [result appendString:encodedValue];
-    }
-	
-    return [result copy];
 }
 
 - (IBAction)user_id_Switch:(id)sender {

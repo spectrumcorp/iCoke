@@ -4,6 +4,46 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
+        <!--I Coke My AccountPVC-->
+        <scene sceneID="FSJ-Ej-0zz">
+            <objects>
+                <pageViewController storyboardIdentifier="MyAccount" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="2KQ-MD-gNS" customClass="iCokeMyAccountPVC" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="MES-vG-hW9"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mJz-vD-HZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1161" y="-937"/>
+        </scene>
+        <!--I Coke My AccountVC-->
+        <scene sceneID="eo6-LV-WPy">
+            <objects>
+                <viewController storyboardIdentifier="iCokeMyAccount" id="CF4-jD-1Ak" customClass="iCokeMyAccountVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Gx9-bb-O4g"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q6F-bc-tkh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5It-Ua-Ojw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHe-Vr-gjH">
+                                <rect key="frame" x="20" y="78" width="280" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XTb-5q-Emn"/>
+                    <connections>
+                        <outlet property="screenNumber" destination="lHe-Vr-gjH" id="8G7-bC-BaB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z6X-VF-ZCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1633" y="-948"/>
+        </scene>
         <!--I Coke Account View Controller - Account-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
@@ -44,7 +84,7 @@
                                     <action selector="textFieldReturn:" destination="CZ4-MO-1fc" eventType="editingDidEndOnExit" id="lZg-xD-p4d"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="5149756283" borderStyle="bezel" placeholder="514 555 6283" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-li-OBu" userLabel="textfield_number">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="bezel" placeholder="514 555 6283" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Zp8-li-OBu" userLabel="textfield_number">
                                 <rect key="frame" x="20" y="152" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,7 +139,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lp4-Mx-w2H">
-                                <rect key="frame" x="79" y="96" width="153" height="29"/>
+                                <rect key="frame" x="65" y="96" width="190" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.72947095790000005" green="0.0" blue="0.017196344249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
@@ -119,6 +159,7 @@
                         <outlet property="password" destination="2ni-FW-ZEe" id="HE5-md-8oL"/>
                         <outlet property="phoneNumber" destination="Zp8-li-OBu" id="Op6-1k-z9J"/>
                         <outlet property="username" destination="Ozp-j4-zoe" id="b1z-cq-euR"/>
+                        <segue destination="FZ5-kp-WvQ" kind="push" id="Ggx-4m-JoU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -158,6 +199,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eCu-QU-6IE"/>
                     <connections>
                         <outlet property="webView" destination="ICS-pf-e1a" id="OOt-tO-gZo"/>
                     </connections>
@@ -183,7 +225,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="center" fixedFrame="YES" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" sectionIndexMinimumDisplayRowCount="6" allowsSelectionDuringEditing="YES" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="W4I-28-ufB" userLabel="UITableView_rewards">
-                                <rect key="frame" x="0.0" y="122" width="320" height="338"/>
+                                <rect key="frame" x="0.0" y="122" width="320" height="336"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="0.72947095790000005" green="0.0" blue="0.017196344249999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
@@ -263,14 +305,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="26U-HQ-TtC" userLabel="label_rewardPoints">
-                                <rect key="frame" x="156" y="123" width="144" height="50"/>
+                                <rect key="frame" x="156" y="123" width="144" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="points" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXL-DE-4j7" userLabel="label_points">
-                                <rect key="frame" x="257" y="158" width="43" height="21"/>
+                                <rect key="frame" x="257" y="158" width="40" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -386,11 +428,10 @@
         <!--Tab Bar Controller - iCoke Points-->
         <scene sceneID="Vex-rW-GRa">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
                 <tabBarController title="iCoke Points" id="8YX-ce-x5E" sceneMemberID="viewController">
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="JQR-rB-NYL">
                         <rect key="frame" x="0.0" y="431" width="320" height="49"/>
@@ -403,6 +444,7 @@
                         <segue destination="f5r-cv-gyJ" kind="relationship" relationship="viewControllers" id="M8t-EP-wfW"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="94" y="306"/>
         </scene>
@@ -424,7 +466,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tVz-QP-SDZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="736" y="314"/>
+            <point key="canvasLocation" x="746" y="314"/>
         </scene>
     </scenes>
     <resources>
