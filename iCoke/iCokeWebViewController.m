@@ -10,6 +10,8 @@
 
 @interface iCokeWebViewController ()
 
+@property (nonatomic, strong) NSURL * signupURL;
+
 @end
 
 @implementation iCokeWebViewController
@@ -18,15 +20,14 @@
 {
     [super viewDidLoad];
 	
-	signupURL = [NSURL fileURLWithPath:@"https://m.icoke.ca/wap/register?execution=e1s1"];
+	self.signupURL = [NSURL fileURLWithPath:@"http://www.google.ca"];
 
-	webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 414)];
-	NSURLRequest *request=[NSURLRequest requestWithURL:signupURL cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:10];
-	[[UINavigationBar appearance] setTintColor:[UIColor redColor]]; //text count
-	[[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]]; //background bar
+	//webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 414)];
+	NSURLRequest *request=[NSURLRequest requestWithURL:self.signupURL cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:10];
+//	[[UINavigationBar appearance] setTintColor:[UIColor redColor]]; //text count
+//	[[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]]; //background bar
 
-	[webView setScalesPageToFit:YES];
-	[webView loadRequest:request];
+	[_webView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

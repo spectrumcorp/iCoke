@@ -48,7 +48,7 @@
 	
 	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
 	{
-		[imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+		[imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary]; //maybe other is prettier?
 	}
 	
 	// image picker needs a delegate,
@@ -60,22 +60,25 @@
 
 - (IBAction)takePhoto:(id)sender
 {
-//	UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-//	
-//	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
-//	{
-//		[imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
-//	}
-//	
-//	// image picker needs a delegate,
-//	[imagePickerController setDelegate:self];
-//	
-//	// Place image picker on the screen
-//	[self presentModalViewController:imagePickerController animated:YES];
-//	
+	UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+	
+	if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+	{
+		[imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+	}
+	
+	// image picker needs a delegate,
+	[imagePickerController setDelegate:self];
+	
+	// Place image picker on the screen
+	[self presentViewController:imagePickerController animated:YES completion:nil];
+
 	NSLog(@"TAKING PHOTO");
 }
 
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+	//put code for store image
+}
 
 // http://www.appcoda.com/ios-programming-send-sms-text-message/
 

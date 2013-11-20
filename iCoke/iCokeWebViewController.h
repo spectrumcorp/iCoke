@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface iCokeWebViewController : UIViewController<NSURLConnectionDelegate>{
-	NSURL * signupURL;
-	__strong IBOutlet UIWebView *webView;
-	
-}
+@interface iCokeWebViewController : UIViewController<NSURLConnectionDelegate>
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 - (IBAction)close:(id)sender;
 

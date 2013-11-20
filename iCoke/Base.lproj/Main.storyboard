@@ -4,46 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--I Coke My AccountPVC-->
-        <scene sceneID="FSJ-Ej-0zz">
-            <objects>
-                <pageViewController storyboardIdentifier="MyAccount" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="2KQ-MD-gNS" customClass="iCokeMyAccountPVC" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="MES-vG-hW9"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mJz-vD-HZd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1161" y="-937"/>
-        </scene>
-        <!--I Coke My AccountVC-->
-        <scene sceneID="eo6-LV-WPy">
-            <objects>
-                <viewController storyboardIdentifier="iCokeMyAccount" id="CF4-jD-1Ak" customClass="iCokeMyAccountVC" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Gx9-bb-O4g"/>
-                        <viewControllerLayoutGuide type="bottom" id="Q6F-bc-tkh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5It-Ua-Ojw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lHe-Vr-gjH">
-                                <rect key="frame" x="20" y="78" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="XTb-5q-Emn"/>
-                    <connections>
-                        <outlet property="screenNumber" destination="lHe-Vr-gjH" id="8G7-bC-BaB"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="z6X-VF-ZCB" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1633" y="-948"/>
-        </scene>
         <!--I Coke Account View Controller - Account-->
         <scene sceneID="W3I-pn-N6e">
             <objects>
@@ -52,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="a8o-iH-hWI"/>
                         <viewControllerLayoutGuide type="bottom" id="bQl-UO-p5d"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="2VE-Yg-loa" userLabel="View_account_main">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="View_account_main" id="2VE-Yg-loa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -159,7 +119,6 @@
                         <outlet property="password" destination="2ni-FW-ZEe" id="HE5-md-8oL"/>
                         <outlet property="phoneNumber" destination="Zp8-li-OBu" id="Op6-1k-z9J"/>
                         <outlet property="username" destination="Ozp-j4-zoe" id="b1z-cq-euR"/>
-                        <segue destination="FZ5-kp-WvQ" kind="push" id="Ggx-4m-JoU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -181,7 +140,7 @@
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-ru-Jj6" userLabel="myWebView">
                                 <rect key="frame" x="0.0" y="66" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44v-V9-cnY">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -201,7 +160,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eCu-QU-6IE"/>
                     <connections>
-                        <outlet property="webView" destination="ICS-pf-e1a" id="OOt-tO-gZo"/>
+                        <outlet property="webView" destination="Y5V-ru-Jj6" id="eI5-sO-aJo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qe-0y-3S0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -373,7 +332,7 @@
                                     <bool key="isElement" value="NO"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="namePhonePad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" keyboardType="alphabet" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="textFieldReturn:" destination="Ovd-b7-KzL" eventType="editingDidEndOnExit" id="uZu-b8-NSd"/>
                                 </connections>

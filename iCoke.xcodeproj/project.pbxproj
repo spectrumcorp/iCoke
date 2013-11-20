@@ -33,8 +33,6 @@
 		7B51CDBF18388C11001F831C /* iCokeIcon_60.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B51CDBE18388C11001F831C /* iCokeIcon_60.png */; };
 		7B51CDC21839B938001F831C /* RewardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51CDC11839B938001F831C /* RewardViewController.m */; };
 		7B51CDC51839C3B7001F831C /* iCokeReward.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51CDC41839C3B7001F831C /* iCokeReward.m */; };
-		7B51CDCD183B69CB001F831C /* iCokeMyAccountVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51CDCC183B69CB001F831C /* iCokeMyAccountVC.m */; };
-		7B51CDD0183B6E7C001F831C /* iCokeMyAccountPVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B51CDCF183B6E7C001F831C /* iCokeMyAccountPVC.m */; };
 		7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */; };
 		7B7A63251836FBA700410183 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7A63241836FBA700410183 /* MessageUI.framework */; };
 		7B7A632B183745F400410183 /* user_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B7A632A183745F400410183 /* user_48.png */; };
@@ -93,10 +91,6 @@
 		7B51CDC11839B938001F831C /* RewardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RewardViewController.m; sourceTree = "<group>"; };
 		7B51CDC31839C3B7001F831C /* iCokeReward.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokeReward.h; sourceTree = "<group>"; };
 		7B51CDC41839C3B7001F831C /* iCokeReward.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokeReward.m; sourceTree = "<group>"; };
-		7B51CDCB183B69CB001F831C /* iCokeMyAccountVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokeMyAccountVC.h; sourceTree = "<group>"; };
-		7B51CDCC183B69CB001F831C /* iCokeMyAccountVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokeMyAccountVC.m; sourceTree = "<group>"; };
-		7B51CDCE183B6E7C001F831C /* iCokeMyAccountPVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokeMyAccountPVC.h; sourceTree = "<group>"; };
-		7B51CDCF183B6E7C001F831C /* iCokeMyAccountPVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokeMyAccountPVC.m; sourceTree = "<group>"; };
 		7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCokePINViewController.h; sourceTree = "<group>"; };
 		7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCokePINViewController.m; sourceTree = "<group>"; };
 		7B7A63241836FBA700410183 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -174,25 +168,12 @@
 			children = (
 				7B028FFB1835604100FD30DB /* Images.xcassets */,
 				7B028FF21835604100FD30DB /* Main.storyboard */,
-				7B51CDCB183B69CB001F831C /* iCokeMyAccountVC.h */,
-				7B51CDCC183B69CB001F831C /* iCokeMyAccountVC.m */,
-				7B51CDCE183B6E7C001F831C /* iCokeMyAccountPVC.h */,
-				7B51CDCF183B6E7C001F831C /* iCokeMyAccountPVC.m */,
+				7B51CDD1183C4FAF001F831C /* Account */,
 				7B029022183570D700FD30DB /* iCoke.entitlements */,
 				7B028FEF1835604100FD30DB /* iCokeAppDelegate.h */,
 				7B028FF01835604100FD30DB /* iCokeAppDelegate.m */,
-				7B028FF51835604100FD30DB /* iCokeAccountViewController.h */,
-				7B028FF61835604100FD30DB /* iCokeAccountViewController.m */,
-				7B7A633E1837DF8C00410183 /* iCokeWebViewController.h */,
-				7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */,
-				7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */,
-				7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */,
-				7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */,
-				7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */,
-				7B51CDC01839B938001F831C /* RewardViewController.h */,
-				7B51CDC11839B938001F831C /* RewardViewController.m */,
-				7B51CDC31839C3B7001F831C /* iCokeReward.h */,
-				7B51CDC41839C3B7001F831C /* iCokeReward.m */,
+				7B51CDD3183C4FC6001F831C /* PINs */,
+				7B51CDD2183C4FBC001F831C /* Rewards */,
 				7B028FE71835604100FD30DB /* Supporting Files */,
 			);
 			path = iCoke;
@@ -231,6 +212,39 @@
 				7B02900B1835604100FD30DB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B51CDD1183C4FAF001F831C /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				7B028FF51835604100FD30DB /* iCokeAccountViewController.h */,
+				7B028FF61835604100FD30DB /* iCokeAccountViewController.m */,
+				7B7A633E1837DF8C00410183 /* iCokeWebViewController.h */,
+				7B7A633F1837DF8C00410183 /* iCokeWebViewController.m */,
+			);
+			name = Account;
+			sourceTree = "<group>";
+		};
+		7B51CDD2183C4FBC001F831C /* Rewards */ = {
+			isa = PBXGroup;
+			children = (
+				7B028FF81835604100FD30DB /* iCokeRewardsViewController.h */,
+				7B028FF91835604100FD30DB /* iCokeRewardsViewController.m */,
+				7B51CDC01839B938001F831C /* RewardViewController.h */,
+				7B51CDC11839B938001F831C /* RewardViewController.m */,
+				7B51CDC31839C3B7001F831C /* iCokeReward.h */,
+				7B51CDC41839C3B7001F831C /* iCokeReward.m */,
+			);
+			name = Rewards;
+			sourceTree = "<group>";
+		};
+		7B51CDD3183C4FC6001F831C /* PINs */ = {
+			isa = PBXGroup;
+			children = (
+				7B65063C1836DB1E00C28F1B /* iCokePINViewController.h */,
+				7B65063D1836DB1E00C28F1B /* iCokePINViewController.m */,
+			);
+			name = PINs;
 			sourceTree = "<group>";
 		};
 		7B7A633818374D2400410183 /* icons */ = {
@@ -407,12 +421,10 @@
 				7B028FFA1835604100FD30DB /* iCokeRewardsViewController.m in Sources */,
 				7B65063E1836DB1E00C28F1B /* iCokePINViewController.m in Sources */,
 				7B51CDC21839B938001F831C /* RewardViewController.m in Sources */,
-				7B51CDD0183B6E7C001F831C /* iCokeMyAccountPVC.m in Sources */,
 				7B028FF11835604100FD30DB /* iCokeAppDelegate.m in Sources */,
 				7B7A63401837DF8C00410183 /* iCokeWebViewController.m in Sources */,
 				7B028FED1835604100FD30DB /* main.m in Sources */,
 				7B028FF71835604100FD30DB /* iCokeAccountViewController.m in Sources */,
-				7B51CDCD183B69CB001F831C /* iCokeMyAccountVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

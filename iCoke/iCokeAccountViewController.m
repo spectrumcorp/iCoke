@@ -12,6 +12,11 @@
 #import "iCokeAccountViewController.h"
 
 @interface iCokeAccountViewController ()
+@property (nonatomic, strong) NSMutableData *responseData;
+@property (nonatomic, strong) NSMutableData *receivedData;
+@property (nonatomic, strong) NSURL *loginURL;
+@property (nonatomic, strong) AFHTTPRequestOperationManager * manager;
+
 @end
 
 @implementation iCokeAccountViewController
@@ -21,9 +26,8 @@
 	
     [super viewDidLoad];
 	
-	manager = [AFHTTPRequestOperationManager manager];
-	loginURL = [NSURL URLWithString:@"https://m.icoke.ca/wap/main"];
-
+	self.manager = [AFHTTPRequestOperationManager manager];
+	self.loginURL = [NSURL URLWithString:@"https://m.icoke.ca/wap/main"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -59,10 +63,10 @@
 		lastFour = [[phoneNumber text] substringWithRange:NSMakeRange(6, 4)];
 
 
-		manager.securityPolicy.allowInvalidCertificates = YES;
-		manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-		manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-		[manager.requestSerializer
+		self.manager.securityPolicy.allowInvalidCertificates = YES;
+		self.manager.responseSerializer = [AFHTTPResponseSerializer serializer];
+		self.manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
+		[self.manager.requestSerializer
 		 setAuthorizationHeaderFieldWithUsername:@"basic_auth_username"
 		 password:@"basic_auth_password"];
 		NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
@@ -73,7 +77,7 @@
 																   @"_eventId_submit":@"Login"
 																   }];
 			
-		[manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
+		[self.manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
 			  success:^(AFHTTPRequestOperation *operation, id responseObject) {
 				  NSString *responseString = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
 				  NSLog(@"\n***RESPONSE***\n %@", responseString);
@@ -89,12 +93,6 @@
 	}else{
 		
 	}
-				
-	NSString * storyboardName = @"Main";
-	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
-	UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"MyAccount"];
-	[self presentViewController:vc animated:YES completion:nil];
-	[self.navigationController pushViewController:vc animated:YES];
 	
 }
 
@@ -127,8 +125,6 @@
 	UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName bundle: nil];
 	UIViewController * vc = [storyboard instantiateViewControllerWithIdentifier:@"webViewController"];
 	[self presentViewController:vc animated:YES completion:nil];
-	[self.navigationController pushViewController:vc animated:YES];
-
 }
 
 

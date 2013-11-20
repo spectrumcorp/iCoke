@@ -14,11 +14,6 @@
 	__weak IBOutlet UITextField *username;
 	__weak IBOutlet UITextField *password;
 	__weak IBOutlet UITextField *phoneNumber;
-	
-    NSMutableData *responseData;
-	NSMutableData *receivedData;
-	NSURL *loginURL;
-	AFHTTPRequestOperationManager * manager;
 }
 
 @end
