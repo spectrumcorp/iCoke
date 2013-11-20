@@ -11,6 +11,7 @@
 @interface iCokeWebViewController : UIViewController<NSURLConnectionDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
+- (void)loadRequestFromString:(NSString*)urlString;
 - (IBAction)close:(id)sender;
 
 

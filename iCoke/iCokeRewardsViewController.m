@@ -23,8 +23,8 @@
 	self.tableView.dataSource = self;
 	self.tableView.delegate = self;
 	self.rewardsArray = [self getRewards];
-	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; //text count
-	[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:186.0f/255.0f green:0.0f/255.0f blue:4.0f/255.0f alpha:1.0f]]; //background bar
+//	[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]]; //text count
+//	[[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:186.0f/255.0f green:0.0f/255.0f blue:4.0f/255.0f alpha:1.0f]]; //background bar
 	[self viewWillDisappear:NO];
 
 }

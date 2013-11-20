@@ -10,10 +10,4 @@
 #import "AFHTTPRequestOperationManager.h"
 
 @interface iCokeAccountViewController : UIViewController<NSURLConnectionDelegate>
-{
-	__weak IBOutlet UITextField *username;
-	__weak IBOutlet UITextField *password;
-	__weak IBOutlet UITextField *phoneNumber;
-}
-
 @end

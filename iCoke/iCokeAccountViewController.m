@@ -16,6 +16,10 @@
 @property (nonatomic, strong) NSMutableData *receivedData;
 @property (nonatomic, strong) NSURL *loginURL;
 @property (nonatomic, strong) AFHTTPRequestOperationManager * manager;
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+@property (weak, nonatomic) IBOutlet UITextField *username;
+@property (weak, nonatomic) IBOutlet UILabel *errorMessage;
 
 @end
 
@@ -28,6 +32,9 @@
 	
 	self.manager = [AFHTTPRequestOperationManager manager];
 	self.loginURL = [NSURL URLWithString:@"https://m.icoke.ca/wap/main"];
+	_errorMessage.text = @"";
+	[[UINavigationBar appearance] setTintColor:[UIColor redColor]]; //text count
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,14 +48,16 @@
 	return UIStatusBarStyleLightContent;
 }
 
-
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+	[self.view endEditing:YES];
+}
 
 -(void)textFieldReturn:(UITextField *)curField
 {
-	if (curField == password) {
+	if (curField == _password) {
         [curField resignFirstResponder]; //close keyboard for good
-    } else if (curField == username || curField == phoneNumber) {
-        [password becomeFirstResponder]; //go to password field
+    } else if (curField == _username || curField == _phoneNumber) {
+        [_password becomeFirstResponder]; //go to password field
     }
 }
 
@@ -57,10 +66,10 @@
 	NSString *firstThree;
 	NSString *lastFour;
 	
-	if ([[phoneNumber text] length] == 10){
-		areaCode = [[phoneNumber text] substringWithRange:NSMakeRange(0, 3)];
-		firstThree = [[phoneNumber text] substringWithRange:NSMakeRange(3, 3)];
-		lastFour = [[phoneNumber text] substringWithRange:NSMakeRange(6, 4)];
+	if ([[_phoneNumber text] length] == 10){
+		areaCode = [[_phoneNumber text] substringWithRange:NSMakeRange(0, 3)];
+		firstThree = [[_phoneNumber text] substringWithRange:NSMakeRange(3, 3)];
+		lastFour = [[_phoneNumber text] substringWithRange:NSMakeRange(6, 4)];
 
 
 		self.manager.securityPolicy.allowInvalidCertificates = YES;
@@ -70,12 +79,12 @@
 		 setAuthorizationHeaderFieldWithUsername:@"basic_auth_username"
 		 password:@"basic_auth_password"];
 		NSMutableDictionary *parameters = [ NSMutableDictionary dictionaryWithDictionary:@{
-																   @"mobile1":areaCode,
-																   @"mobile2":firstThree,
-																   @"mobile3":lastFour,
-																   @"password":[password text],
-																   @"_eventId_submit":@"Login"
-																   }];
+									   @"mobile1":areaCode,
+									   @"mobile2":firstThree,
+									   @"mobile3":lastFour,
+									   @"password":[_password text],
+									   @"_eventId_submit":@"Login"
+									   }];
 			
 		[self.manager POST:@"https://m.icoke.ca/wap/login?execution=e1s1" parameters:parameters
 			  success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -84,6 +93,10 @@
 			  }
 			  failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 				  NSLog(@"\n***Error***\n %@", error);
+				  _errorMessage.text = @"ERROR";
+				  [_username resignFirstResponder];
+				  [_phoneNumber resignFirstResponder];
+				  [_password resignFirstResponder];
 			  }
 		 ];
 
@@ -91,19 +104,24 @@
 		
 		
 	}else{
+		_errorMessage.text = @"Invalid phone number";
 		
+		[_username resignFirstResponder];
+		[_phoneNumber resignFirstResponder];
+		[_password resignFirstResponder];
+
 	}
 	
 }
 
 - (IBAction)user_id_Switch:(id)sender {
 	
-	if (username.hidden){
-		[username setHidden: NO];
-		[phoneNumber setHidden:YES];
+	if (_username.hidden){
+		[_username setHidden: NO];
+		[_phoneNumber setHidden:YES];
 	}else{
-		[username setHidden: YES];
-		[phoneNumber setHidden: NO];
+		[_username setHidden: YES];
+		[_phoneNumber setHidden: NO];
 	}
 }
 

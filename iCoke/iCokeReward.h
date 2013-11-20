@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface iCokeReward : NSObject{
+@interface iCokeReward : NSObject
 
-}
 @property int sid;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *points;

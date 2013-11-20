@@ -10,8 +10,6 @@
 
 @interface iCokeWebViewController ()
 
-@property (nonatomic, strong) NSURL * signupURL;
-
 @end
 
 @implementation iCokeWebViewController
@@ -20,20 +18,22 @@
 {
     [super viewDidLoad];
 	
-	self.signupURL = [NSURL fileURLWithPath:@"http://www.google.ca"];
-
-	//webView=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 320, 414)];
-	NSURLRequest *request=[NSURLRequest requestWithURL:self.signupURL cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:10];
-//	[[UINavigationBar appearance] setTintColor:[UIColor redColor]]; //text count
-//	[[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]]; //background bar
-
-	[_webView loadRequest:request];
+	[self loadRequestFromString:@"https://m.icoke.ca/wap/register?execution=e1s1"];
+	[[UINavigationBar appearance] setTintColor:[UIColor redColor]]; //text count
+	[[UINavigationBar appearance] setBarTintColor:[UIColor clearColor]]; //background bar
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)loadRequestFromString:(NSString*)urlString
+{
+    NSURL *url = [NSURL URLWithString:urlString];
+	NSURLRequest *urlRequest=[NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowedInMemoryOnly timeoutInterval:10];
+
+    [self.webView loadRequest:urlRequest];
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error

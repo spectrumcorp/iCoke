@@ -9,6 +9,7 @@
 #import "iCokePINViewController.h"
 
 @interface iCokePINViewController () <MFMessageComposeViewControllerDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+@property (weak, nonatomic) IBOutlet UITextField *pin;
 
 @end
 
@@ -31,6 +32,10 @@
 	return UIStatusBarStyleLightContent;
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+	[self.view endEditing:YES];
+}
+
 -(IBAction)textFieldReturn:(id)sender
 {
 	[sender resignFirstResponder]; //close keyboard for good
@@ -38,9 +43,9 @@
 
 - (IBAction)submitPin:(id)sender
 {
-	NSLog(@"%@", [pin text]);
+	NSLog(@"%@", [_pin text]);
 	//[[UIApplication sharedApplication] openURL: [NSURL URLWithString:@"sms:42653"]];
-    [self showSMS:[pin text] ];
+    [self showSMS];
 }
 
 - (IBAction)usePhoto:(id)sender {
@@ -83,7 +88,7 @@
 // http://www.appcoda.com/ios-programming-send-sms-text-message/
 
 
-- (void)showSMS:(NSString*)pinCode {
+- (void)showSMS {
     
     if(![MFMessageComposeViewController canSendText]) {
         UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
@@ -92,7 +97,7 @@
     }
 	
     NSArray * recipent = @[@"42653"];
-    NSString * message = [NSString stringWithFormat:@"%@", pinCode];
+    NSString * message = [NSString stringWithFormat:@"%@", _pin];
     
     MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
     messageController.messageComposeDelegate = self;

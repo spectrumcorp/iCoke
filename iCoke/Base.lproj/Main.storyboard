@@ -32,7 +32,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="•••••••" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2ni-FW-ZEe" userLabel="textfield_password">
-                                <rect key="frame" x="20" y="221" width="150" height="30"/>
+                                <rect key="frame" x="20" y="221" width="146" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mgo-9W-xaY" userLabel="button_signup">
-                                <rect key="frame" x="97" y="378" width="116" height="30"/>
+                                <rect key="frame" x="102" y="378" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Sign Up Now!">
@@ -111,14 +111,22 @@
                                     <action selector="user_id_Switch:" destination="CZ4-MO-1fc" eventType="valueChanged" id="VIs-xq-z0q"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="272" translatesAutoresizingMaskIntoConstraints="NO" id="kCN-03-RYy" userLabel="label_errorMsg">
+                                <rect key="frame" x="21" y="259" width="272" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.72947095790000005" green="0.0" blue="0.017196344249999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="user_32.png" id="u1e-5L-l1D"/>
                     <connections>
-                        <outlet property="password" destination="2ni-FW-ZEe" id="HE5-md-8oL"/>
-                        <outlet property="phoneNumber" destination="Zp8-li-OBu" id="Op6-1k-z9J"/>
-                        <outlet property="username" destination="Ozp-j4-zoe" id="b1z-cq-euR"/>
+                        <outlet property="errorMessage" destination="kCN-03-RYy" id="Hxd-9R-zgf"/>
+                        <outlet property="password" destination="2ni-FW-ZEe" id="0dl-ZS-UiP"/>
+                        <outlet property="phoneNumber" destination="Zp8-li-OBu" id="tYA-fs-Tsa"/>
+                        <outlet property="username" destination="Ozp-j4-zoe" id="eAv-o4-FfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
@@ -140,7 +148,7 @@
                             <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5V-ru-Jj6" userLabel="myWebView">
                                 <rect key="frame" x="0.0" y="66" width="320" height="414"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </webView>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="44v-V9-cnY">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
@@ -365,19 +373,12 @@
                                     <action selector="usePhoto:" destination="Ovd-b7-KzL" eventType="touchUpInside" id="HcB-hw-X4f"/>
                                 </connections>
                             </button>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMp-ml-aMg" userLabel="label_pin_status">
-                                <rect key="frame" x="30" y="143" width="255" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.72947095790000005" green="0.0" blue="0.017196344249999999" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Submit Pin" image="octagon-outline-32.png" id="IWB-Uc-Dpm"/>
                     <connections>
-                        <outlet property="pin" destination="rD4-ii-Zcp" id="2rJ-bZ-tIE"/>
+                        <outlet property="pin" destination="rD4-ii-Zcp" id="nyz-1u-hme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rqB-wP-4GZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

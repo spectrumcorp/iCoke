@@ -9,10 +9,5 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
-@interface iCokePINViewController : UIViewController {
-
-	__weak IBOutlet UITextField *pin;
-	
-}
-
+@interface iCokePINViewController : UIViewController
 @end
